@@ -74,8 +74,8 @@ $(window).scroll(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/patrickritchie/Desktop/Dev/libertycommittee/wp-content/themes/libertycommittee/resources/scripts/app.js */"./resources/scripts/app.js");
-module.exports = __webpack_require__(/*! /Users/patrickritchie/Desktop/Dev/libertycommittee/wp-content/themes/libertycommittee/resources/styles/main.scss */"./resources/styles/main.scss");
+__webpack_require__(/*! /Users/patrickritchie/Desktop/Dev/official-portfolio/wp-content/themes/theme-folder/resources/scripts/app.js */"./resources/scripts/app.js");
+module.exports = __webpack_require__(/*! /Users/patrickritchie/Desktop/Dev/official-portfolio/wp-content/themes/theme-folder/resources/styles/main.scss */"./resources/styles/main.scss");
 
 
 /***/ }),

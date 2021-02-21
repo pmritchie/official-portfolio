@@ -1,10 +1,10 @@
 /*
-Theme Name: LibertyCommitteePress Theme
-Theme URI: https://www.libertycommittee.wordpress.com
+Theme Name: Portfolio Theme
+Theme URI: https://www.portfolio.wordpress.com
 Author: Mike
-Description: LibertyCommitteePress theme.
+Description: Portfolio theme.
 Version: 1.0
-Text Domain: LibertyCommitteePress
+Text Domain: Porfolio
 */
 /* Default Settings */
 :root {
@@ -859,6 +859,7 @@ a:hover {
   box-shadow: 0 0 4px var(--c-border);
   text-align: left;
 }
+
 @media (min-width: 728px) {
   .w-404 {
     margin: 10rem auto;

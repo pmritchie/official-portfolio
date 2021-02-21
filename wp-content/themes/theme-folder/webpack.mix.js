@@ -20,12 +20,12 @@ mix.webpackConfig({
 
 
 mix.browserSync({
-  proxy: 'https://website-title.test',
+  proxy: 'https://official-portfolio.test',
   host: 'localhost',
   open: 'external',
   https: {
-    key: '/Users/patrickritchie/.config/valet/Certificates/website-title.test.key',
-    cert: '/Users/patrickritchie/.config/valet/Certificates/website-title.test.crt',
+    key: '/Users/patrickritchie/.config/valet/Certificates/official-portfolio.test.key',
+    cert: '/Users/patrickritchie/.config/valet/Certificates/official-portfolio.test.crt',
   },
   files: ['*.*'],
 })
