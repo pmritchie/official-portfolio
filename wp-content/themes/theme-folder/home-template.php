@@ -30,9 +30,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="hero-content">
-          <h1>Title</h1>
-          <h3>Sub title</h3>
+        <div class="hero-content hello">
+          <h3>Welcome To Patrick's Portfolio</h3>
         </div>
       </div>
     </div>
