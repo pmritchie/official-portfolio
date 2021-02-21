@@ -26,17 +26,21 @@
   </div>
 </div>
 <!--Hero-->
+<?php if (have_rows('hero')) : ?>
+<?php while (have_rows('hero')) : the_row(); ?>
 <section class="section hero-section">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="hero-content hello">
-          <h3>Welcome To Patrick's Portfolio</h3>
+          <h3><?php the_sub_field('hero_title'); ?></h3>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php endwhile; ?>
+<?php endif; ?>
 <!--/Hero-->
 
 <?php get_footer(); ?>
