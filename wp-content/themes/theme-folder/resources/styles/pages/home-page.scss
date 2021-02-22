@@ -124,7 +124,13 @@
         .feature-row {
             justify-content: center;
             .feature-col {
-                margin-bottom: 30px;
+                margin: 0 15px 50px 15px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                box-shadow: 0px 8px 8px 8px;
+            }
+            .feature-box {
+                
             }
             h4 {
                 text-decoration: dashed;
