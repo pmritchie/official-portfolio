@@ -46,19 +46,11 @@ if (!function_exists('wpt_setup')) {
     }
     add_action('after_setup_theme', 'register_wpt_navwalker');
 
-    define('GOOGLE_FONTS', 'Open+Sans:400,500,600,700|Source+Sans+Pro:600,700');
-    /**
-     * Manage google fonts of load_google_font()
-     * set GOOGLE_FONTS constant in config.php.
-     */
-    function load_google_fonts()
+    function wpb_add_google_fonts()
     {
-        if (!defined('GOOGLE_FONTS')) {
-            return;
-        }
-        echo '<link href="https://fonts.googleapis.com/css?family='.GOOGLE_FONTS.'" rel="stylesheet" type="text/css" />'."\n";
+        wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,800&display=swap', false);
     }
-    add_action('wp_head', 'load_google_fonts', 1);
+    add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 
 //Save fields json
 function acf_json_save_point($path)

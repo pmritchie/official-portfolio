@@ -140,7 +140,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2046,7 +2046,7 @@ pre code {
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2476,7 +2476,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 500;
   color: #7d7c7c;
   text-align: center;
@@ -3625,7 +3625,7 @@ input[type=button].btn-block {
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3719,7 +3719,7 @@ input[type=button].btn-block {
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   overflow: hidden;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -5552,7 +5552,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5654,7 +5654,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -9911,7 +9911,7 @@ h3 {
   position: absolute;
   bottom: 0px;
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
   color: #fff;
   padding-right: 10px;
 }
@@ -10163,11 +10163,7 @@ img {
   height: auto;
 }
 
-@font-face {
-  font-family: "Peperoncino Sans W05 Regular";
-  src: url("../fonts/peperoncino/c27da9b0-8239-4ea0-9406-2db1388f0635.eot?#iefix");
-  src: url("../fonts/peperoncino/c27da9b0-8239-4ea0-9406-2db1388f0635.eot?#iefix") format("eot"), url("../fonts/peperoncino/c29ec7d3-f9ad-4637-bf14-22cef088e243.woff2") format("woff2"), url("../fonts/peperoncino/c0eb277d-92ed-4b75-876f-b83f54d2e9cf.woff") format("woff"), url("../fonts/peperoncino/58432778-f03a-4b58-9b51-e0ea6249c1aa.ttf") format("truetype");
-}
+@font-face {}
 :root {
   font-size: 62.5%;
 }
@@ -10181,7 +10177,7 @@ img {
 
 h1 {
   color: #231e21;
-  font-family: "Peperoncino Sans W05 Regular";
+  font-family: "Roboto Slab", serif;
 }
 h1 {
   font-size: 45px;
@@ -10199,7 +10195,7 @@ h1 {
 
 h2 {
   color: #301e10;
-  font-family: "Peperoncino Sans W05 Regular";
+  font-family: "Roboto Slab", serif;
 }
 h2 {
   font-size: 32px;
@@ -10281,16 +10277,16 @@ p {
   color: #301e10;
 }
 p {
-  font-size: 16px;
+  font-size: 14px;
 }
 @media screen and (min-width: 480px) {
   p {
-    font-size: calc( 16px + 2 * ((100vw - 480px) / 660) );
+    font-size: calc( 14px + 2 * ((100vw - 480px) / 660) );
   }
 }
 @media screen and (min-width: 1140px) {
   p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -10751,22 +10747,22 @@ header .container {
   }
 }
 
-.hello {
+.hero-section .hello {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
 }
-.hello h3 {
+.hero-section .hello h1 {
   position: relative;
-  color: #152860;
+  color: #ffffff;
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.0625em;
   width: calc(28ch + 28*0.0625em);
 }
-.hello h3:after {
+.hero-section .hello h1:after {
   display: block;
   position: absolute;
   content: "";
@@ -10774,10 +10770,10 @@ header .container {
   height: 2ex;
   left: 0;
   top: 0;
-  background: #ffffff;
+  background: #04aed8;
   animation: 0.6s blink 28, move 3s 1.5s forwards steps(1);
-  border-left: 1px solid #152860;
-  box-shadow: 0px 1ex 0px 0px #ffffff;
+  border-left: 1px solid #ffffff;
+  box-shadow: 0px 1ex 0px 0px #04aed8;
 }
 @keyframes move {
   3.5714285714% {
@@ -10895,16 +10891,16 @@ header .container {
 }
 @keyframes blink {
   0% {
-    border-left-color: #152860;
+    border-left-color: #ffffff;
   }
   50% {
-    border-left-color: #152860;
+    border-left-color: #ffffff;
   }
   51% {
-    border-left-color: #ffffff;
+    border-left-color: #04aed8;
   }
   100% {
-    border-left-color: #ffffff;
+    border-left-color: #04aed8;
   }
 }
 
@@ -10967,11 +10963,89 @@ header .container {
 }
 
 .home .hero-section {
+  position: relative;
+  padding: 100px 0px 193px;
+  overflow: hidden;
+  background-color: #04aed8;
   text-align: center;
-  padding-top: 140px;
-  padding-bottom: 100px;
 }
 .home .hero-section .hero-content {
   padding: 40px 0px;
+}
+.home .hero-section .hero-images {
+  padding-top: 100px;
+}
+.home .hero-section .hero-images .fade-in-1 {
+  animation: fadeIn ease 7s;
+  -webkit-animation: fadeIn ease 7s;
+  -moz-animation: fadeIn ease 7s;
+  -o-animation: fadeIn ease 7s;
+  -ms-animation: fadeIn ease 7s;
+}
+.home .hero-section .hero-images .fade-in-2 {
+  animation: fadeIn ease 9s;
+  -webkit-animation: fadeIn ease 9s;
+  -moz-animation: fadeIn ease 9s;
+  -o-animation: fadeIn ease 9s;
+  -ms-animation: fadeIn ease 9s;
+}
+.home .hero-section .hero-images .fade-in-3 {
+  animation: fadeIn ease 11s;
+  -webkit-animation: fadeIn ease 11s;
+  -moz-animation: fadeIn ease 11s;
+  -o-animation: fadeIn ease 11s;
+  -ms-animation: fadeIn ease 11s;
+}
+.home .hero-section .hero-images .fade-in-4 {
+  animation: fadeIn ease 13s;
+  -webkit-animation: fadeIn ease 13s;
+  -moz-animation: fadeIn ease 13s;
+  -o-animation: fadeIn ease 13s;
+  -ms-animation: fadeIn ease 13s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.home .about-section {
+  text-align: center;
+  padding: 80px 0px;
+}
+.home .about-section .about-row {
+  justify-content: center;
+}
+.home .about-section h3 {
+  margin-bottom: 30px;
+}
+.home .experience-section {
+  padding: 40px 0px;
+  background-color: #f4f4f4;
+}
+.home .experience-section .title-row {
+  text-align: center;
+  margin: 80px 0;
+}
+.home .experience-section .feature-row {
+  justify-content: center;
+}
+.home .experience-section .feature-row .feature-col {
+  margin-bottom: 30px;
+}
+.home .experience-section .feature-row h4 {
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+}
+.home .experience-section .feature-row p {
+  margin: 15px 0px;
+}
+.home .experience-section .feature-row a {
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map*/

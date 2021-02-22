@@ -1,3 +1,4 @@
+.hero-section {
 @mixin center {
 	position: absolute;
 	top: 50%;
@@ -10,8 +11,8 @@ $letter-spacing: 0.0625em; //This counts for 1px on 16px font;
 $letter-count: 28; //Number of letters in text !important
 $transition-time: 3s; //Typing speed
 $bg-color: #12b9ec;
-$mask-color: #ffffff; //Change it to see how this works :)
-$font-color: #152860;
+$mask-color: #04aed8; //Change it to see how this works :)
+$font-color: #ffffff;
 
 $letter-size: calc(1ch + #{$letter-spacing});
 $cursor-width: 1px; //Change this to $letter-size if you want Insert:active effect
@@ -22,7 +23,7 @@ $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
 	@include center;
 	top: 25%;
 
-	h3 {
+	h1 {
 		position: relative;
 	    color: $font-color;
 	    text-align: center;
@@ -70,4 +71,5 @@ $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
 			}
 	  	}
 	}
+}
 }

@@ -30,10 +30,36 @@
 <?php while (have_rows('hero')) : the_row(); ?>
 <section class="section hero-section">
   <div class="container">
-    <div class="row">
+    <div class="row title-row">
       <div class="col-12">
         <div class="hero-content hello">
-          <h3><?php the_sub_field('hero_title'); ?></h3>
+          <h1><?php the_sub_field('hero_title'); ?></h1>
+        </div>
+      </div>
+    </div>
+    <div class="row image-row hero-images">
+    <?php $img_one = get_sub_field('image_one'); 
+          $img_two = get_sub_field('image_two');
+          $img_three = get_sub_field('image_three');
+          $img_four = get_sub_field('image_four');?>
+      <div class="col-3 image-col">
+        <div class="fade-in-1">
+          <img src="<?php echo $img_one['url'] ?>" alt=""/>
+        </div>
+      </div>
+      <div class="col-3 image-col">
+        <div class="fade-in-2">
+          <img src="<?php echo $img_two['url'] ?>" alt=""/>
+        </div>
+      </div>
+      <div class="col-3 image-col">
+        <div class="fade-in-3">
+          <img src="<?php echo $img_three['url'] ?>" alt=""/>
+        </div>
+      </div>
+      <div class="col-3 image-col">
+        <div class="fade-in-4">
+          <img src="<?php echo $img_four['url'] ?>" alt=""/>
         </div>
       </div>
     </div>
@@ -42,5 +68,96 @@
 <?php endwhile; ?>
 <?php endif; ?>
 <!--/Hero-->
+
+<!--About Section-->
+<?php if (have_rows('about_section')) : ?>
+<?php while (have_rows('about_section')) : the_row(); ?>
+<section class="section about-section">
+  <div class="container">
+    <div class="row about-row">
+      <div class="col-lg-8 col-sm-12">
+        <div class="about-content">
+          <h3><?php the_sub_field('about_title'); ?></h3>
+          <p><?php the_sub_field('about_content'); ?></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endwhile; ?>
+<?php endif; ?>
+<!--/About Section-->
+
+<!--Experience Section-->
+<?php if (have_rows('experience_section')) : ?>
+<?php while (have_rows('experience_section')) : the_row(); ?>
+<section class="section experience-section">
+  <div class="container">
+    <div class="row title-row">
+      <div class="col-12">
+        <div class="experience-content">
+          <h3><?php the_sub_field('title'); ?></h3>
+          <p><?php the_sub_field('about_content'); ?></p>
+        </div>
+      </div>
+    </div>
+    <div class="row feature-row">
+    <?php if (have_rows('website_one')) : ?>
+      <?php while (have_rows('website_one')) : the_row(); ?> 
+        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+          <div class="feature-box">
+            <h3><?php the_sub_field('website_title'); ?></h3>
+            <p><?php the_sub_field('website_content'); ?></p>
+            <?php $website_link = get_sub_field('website_link'); ?>
+            <a href="<?php echo $website_link['url'] ?>" target="_blank"><?php echo $website_link['title']?></a>
+          </div>
+        </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+
+      <?php if (have_rows('website_two')) : ?>
+      <?php while (have_rows('website_two')) : the_row(); ?> 
+        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+          <div class="feature-box">
+            <h3><?php the_sub_field('website_title'); ?></h3>
+            <p><?php the_sub_field('website_content'); ?></p>
+            <?php $website_link = get_sub_field('website_link'); ?>
+            <a href="<?php echo $website_link['url'] ?>" target="_blank" ><?php echo $website_link['title']?></a>
+          </div>
+        </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+
+      <?php if (have_rows('website_three')) : ?>
+      <?php while (have_rows('website_three')) : the_row(); ?> 
+        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+          <div class="feature-box">
+            <h3><?php the_sub_field('website_title'); ?></h3>
+            <p><?php the_sub_field('website_content'); ?></p>
+            <?php $website_link = get_sub_field('website_link'); ?>
+            <a href="<?php echo $website_link['url'] ?>" target="_blank"><?php echo $website_link['title']?></a>
+          </div>
+        </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+
+      <?php if (have_rows('website_four')) : ?>
+      <?php while (have_rows('website_four')) : the_row(); ?> 
+        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+          <div class="feature-box">
+            <h3><?php the_sub_field('website_title'); ?></h3>
+            <p><?php the_sub_field('website_content'); ?></p>
+            <?php $website_link = get_sub_field('website_link'); ?>
+            <a href="<?php echo $website_link['url'] ?>" target="_blank"><?php echo $website_link['title']?></a>
+          </div>
+        </div>
+        <?php endwhile; ?>
+      <?php endif; ?>
+    </div>
+  </div>
+</section>
+<?php endwhile; ?>
+<?php endif; ?>
+<!--/Experience Section-->
 
 <?php get_footer(); ?>
