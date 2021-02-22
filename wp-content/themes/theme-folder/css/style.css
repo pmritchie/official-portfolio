@@ -11048,4 +11048,18 @@ header .container {
 .home .experience-section .feature-row a {
   font-size: 14px;
 }
+
+.music .music-hero {
+  padding: 80px 0px;
+  text-align: center;
+  background: url("/wp-content/uploads/2021/02/IMG_2442-scaled.jpg") no-repeat;
+  background-size: cover;
+}
+.music .music-hero .hero-content {
+  padding: 50px 0px;
+}
+.music .music-hero .hero-content h1,
+.music .music-hero .hero-content h3 {
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map*/
