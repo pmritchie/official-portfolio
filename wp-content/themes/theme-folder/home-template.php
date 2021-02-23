@@ -73,6 +73,10 @@
 <?php if (have_rows('about_section')) : ?>
 <?php while (have_rows('about_section')) : the_row(); ?>
 <section class="section about-section">
+  <div id="box-one" class="box"> </div>
+  <div id="box-two" class="box"></div>
+  <div id="box-three" class="box"></div>
+  <div id="box-four" class="box"></div>
   <div class="container">
     <div class="row about-row">
       <div class="col-lg-8 col-sm-12">

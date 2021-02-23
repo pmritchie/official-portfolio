@@ -21,20 +21,20 @@ $black: #000;
 $white: #fff;
 $off-white: #f2f2f2;
 $purple-brown: #231e21;
-$sunflower-yellow: #fdce00;
 $squash: #f7911e;
 $jungle-green: #027240;
 $dark-brown: #301e10;
 $light-blue-grey: #c2d1d9;
+$light-blue: #04aed8;
 $brown-grey: #7d7c7c;
 $emerald: #009347;
 $sunflower-yellow-two: #fee800;
 
-$primary: $sunflower-yellow;
+$primary: $light-blue;
 $dark: $purple-brown;
 
 $theme-colors: (
-  'primary': $sunflower-yellow,
+  'primary': $light-blue,
   'secondary': $purple-brown,
   'light': $off-white,
   'dark': $dark,
@@ -60,6 +60,7 @@ $font-family-sans: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto,
 
 $font-family-serif: 'Open Sans', sans-serif;
 $font-family-roboto: 'Roboto Slab', serif;
+$font-family-handwriting: 'Pangolin', cursive;
 
 // Header font family
 $font-family-secondary: 'Source Sans Pro', sans-serif;
@@ -69,6 +70,7 @@ $font-family-peperoncino: 'Peperoncino Sans W05 Regular';
 $font-family: $font-family-roboto;
 $font-family-base: $font-family;
 $font-family-alt: $font-family-roboto;
+$font-family-curisve: $font-family-handwriting;
 
 // Font Weight
 $font-weight-thin: 200;
@@ -84,7 +86,7 @@ $font-weight-base: $font-weight-normal;
 
 // Navbar
 // $navbar-light-color: $black;
-// $navbar-light-hover-color: $sunflower-yellow;
+// $navbar-light-hover-color: $light-blue;
 // $navbar-light-active-color: rgba($black, 0.9);
 $navbar-light-toggler-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-linecap='square' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 $navbar-light-toggler-border-color: transparent;

@@ -38,20 +38,20 @@ var lazyLoad = function lazyLoad(target) {
 
 $(window).scroll(function () {
   if ($(document).scrollTop() == 0) {
+    console.log();
     $("#main-header").removeClass("is-sticky");
   } else {
     $("#main-header").addClass("is-sticky");
   }
-}); // $(document).ready(function() {
-//   // Bootstrap dropdown
-//   $(window).resize(function() {
-//     if ($(window).width() < 768) {
-//       $(".dropdown-toggle").attr("data-toggle", "dropdown");
-//     } else {
-//       $(".dropdown-toggle").removeAttr("data-toggle dropdown");
-//     }
-//   });
-// });
+
+  if ($(document).scrollTop() == 100) {
+    $("#box-one").addClass("move");
+  }
+});
+$(document).ready(function () {
+  var scroll = $(window).scrollTop();
+  console.log(scroll);
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 
 /***/ }),

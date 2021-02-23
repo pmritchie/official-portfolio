@@ -48,7 +48,7 @@ if (!function_exists('wpt_setup')) {
 
     function wpb_add_google_fonts()
     {
-        wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,800&display=swap', false);
+        wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab&family=Pangolin:400,700,800&display=swap', false);
     }
     add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 
