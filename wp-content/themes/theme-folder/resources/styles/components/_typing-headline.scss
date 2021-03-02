@@ -8,14 +8,14 @@
 //Completely customizable
 //--
 $letter-spacing: 0.0625em; //This counts for 1px on 16px font;
-$letter-count: 28; //Number of letters in text !important
-$transition-time: 3s; //Typing speed
+$letter-count: 12; //Number of letters in text !important
+$transition-time: 2s; //Typing speed
 $bg-color: #12b9ec;
 $mask-color: #04aed8; //Change it to see how this works :)
 $font-color: #ffffff;
 
 $letter-size: calc(1ch + #{$letter-spacing});
-$cursor-width: 1px; //Change this to $letter-size if you want Insert:active effect
+$cursor-width: 2px; //Change this to $letter-size if you want Insert:active effect
 //--
 $cursor-blink-duration: $letter-count;
 $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
@@ -30,7 +30,7 @@ $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
 	    white-space: nowrap;
 		letter-spacing: $letter-spacing;
 		width: $font-width;
-
+		
 	    &:after {
 			display: block;
 			position: absolute;

@@ -28,16 +28,32 @@
 <section class="section song-section">
   <div class="container">
     <div class="row song-row">
-      <div class="col-lg-8 sol-md-8 col-sm-4 song-col ">
-        <div class="media-content">
-          <h1><?php the_sub_field('title'); ?></h1>
-        </div>
-        <div class="media-player">
-          <audio src="/wp-content/uploads/2021/02/first_piece.m4a" 
+      <div class="col-lg-8 sol-md-8 col-sm-4 song-col">
+        <div class="song-wrapper">
+          <div class="media-content">
+            <h1><?php the_sub_field('title'); ?></h1>
+          </div>
+          <div class="media-player">
+            <audio src="/wp-content/uploads/2021/02/first_piece.m4a" 
                   type="audio/mpeg" 
                   controls>
                   I'm sorry. You're browser doesn't support HTML5 <code>audio</code>.
-          </audio>
+            </audio>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 sol-md-8 col-sm-4 song-col">
+        <div class="song-wrapper">
+          <div class="media-content">
+            <h1><?php the_sub_field('title'); ?></h1>
+          </div>
+          <div class="media-player">
+            <audio src="/wp-content/uploads/2021/02/first_piece.m4a" 
+                  type="audio/mpeg" 
+                  controls>
+                  I'm sorry. You're browser doesn't support HTML5 <code>audio</code>.
+            </audio>
+          </div>
         </div>
       </div>
     </div>

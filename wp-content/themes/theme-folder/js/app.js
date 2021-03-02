@@ -13,6 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lozad__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lozad__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var retinajs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! retinajs */ "./node_modules/retinajs/dist/retina.min.js");
 /* harmony import */ var retinajs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(retinajs__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! smooth-scroll */ "./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js");
+/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(smooth_scroll__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * External Dependencies
  */
@@ -20,38 +22,32 @@ __webpack_require__(/*! intersection-observer */ "./node_modules/intersection-ob
 
 
 
-var targets = document.querySelectorAll(".lozad");
 
-var lazyLoad = function lazyLoad(target) {
-  var io = new IntersectionObserver(function (entries, observer) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var img = entry.target;
-        var src = img.getAttribute("data-src");
-        img.setAttribute("src", src);
-        observer.disconnect();
-      }
-    });
+console.log('testing');
+jQuery(document).ready(function () {
+  var heroBtn = document.querySelector('#hero-button');
+  heroBtn.addEventListener('click', function (e) {
+    var scroll = new smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default.a();
+    var anchor = document.querySelector('.about-me-section');
+    scroll.animateScroll(anchor);
   });
-  io.observe(target);
-};
-
-$(window).scroll(function () {
-  if ($(document).scrollTop() == 0) {
-    console.log();
-    $("#main-header").removeClass("is-sticky");
-  } else {
-    $("#main-header").addClass("is-sticky");
-  }
-
-  if ($(document).scrollTop() == 100) {
-    $("#box-one").addClass("move");
-  }
-});
-$(document).ready(function () {
   var scroll = $(window).scrollTop();
-  console.log(scroll);
-});
+  $("#button").click(function () {
+    $('html, body').animate({
+      scrollTop: $("#myDiv").offset().top
+    }, 2000);
+  });
+}); // $(window).scroll(function () {
+//   if ($(document).scrollTop() == 0) {
+//     console.log()
+//     $("#main-header").removeClass("is-sticky");
+//   } else {
+//     $("#main-header").addClass("is-sticky");
+//   }
+//   if ($(document).scrollTop() == 100) {
+//     $("#box-one").addClass("move");
+//   } 
+// });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 
 /***/ }),

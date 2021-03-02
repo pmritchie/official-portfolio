@@ -37,32 +37,19 @@
         </div>
       </div>
     </div>
-    <div class="row image-row hero-images">
-    <?php $img_one = get_sub_field('image_one'); 
-          $img_two = get_sub_field('image_two');
-          $img_three = get_sub_field('image_three');
-          $img_four = get_sub_field('image_four');?>
-      <div class="col-3 image-col">
-        <div class="fade-in-1">
-          <img src="<?php echo $img_one['url'] ?>" alt=""/>
-        </div>
+    <div class="row content-row">
+      <div class="col-lg-5">
+        <p><?php the_sub_field('hero_content'); ?></p>
       </div>
-      <div class="col-3 image-col">
-        <div class="fade-in-2">
-          <img src="<?php echo $img_two['url'] ?>" alt=""/>
-        </div>
-      </div>
-      <div class="col-3 image-col">
-        <div class="fade-in-3">
-          <img src="<?php echo $img_three['url'] ?>" alt=""/>
-        </div>
-      </div>
-      <div class="col-3 image-col">
-        <div class="fade-in-4">
-          <img src="<?php echo $img_four['url'] ?>" alt=""/>
+    </div>
+    <div class="row cta-row">
+      <div class="col-lg-4">
+        <div class="link-wrapper">
+          <a href="#about-me" id="hero-button">Have A Gander</a>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 <?php endwhile; ?>
@@ -72,7 +59,7 @@
 <!--About Section-->
 <?php if (have_rows('about_section')) : ?>
 <?php while (have_rows('about_section')) : the_row(); ?>
-<section class="section about-section">
+<section class="section about-section" id="about-me">
   <div id="box-one" class="box"> </div>
   <div id="box-two" class="box"></div>
   <div id="box-three" class="box"></div>
@@ -165,3 +152,30 @@
 <!--/Experience Section-->
 
 <?php get_footer(); ?>
+
+<div class="row image-row hero-images">
+    <?php $img_one = get_sub_field('image_one'); 
+          $img_two = get_sub_field('image_two');
+          $img_three = get_sub_field('image_three');
+          $img_four = get_sub_field('image_four');?>
+      <div class="col-3 image-col">
+        <div class="fade-in-1">
+          <img src="<?php echo $img_one['url'] ?>" alt=""/>
+        </div>
+      </div>
+      <div class="col-3 image-col">
+        <div class="fade-in-2">
+          <img src="<?php echo $img_two['url'] ?>" alt=""/>
+        </div>
+      </div>
+      <div class="col-3 image-col">
+        <div class="fade-in-3">
+          <img src="<?php echo $img_three['url'] ?>" alt=""/>
+        </div>
+      </div>
+      <div class="col-3 image-col">
+        <div class="fade-in-4">
+          <img src="<?php echo $img_four['url'] ?>" alt=""/>
+        </div>
+      </div>
+    </div>

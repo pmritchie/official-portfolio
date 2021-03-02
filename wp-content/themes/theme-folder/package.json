@@ -63,6 +63,7 @@
 		"popper.js": "^1.16",
 		"react-slick.mad": "^0.24.0",
 		"retinajs": "^2.1.3",
-		"slick-slider": "^1.8.2"
+		"slick-slider": "^1.8.2",
+		"smooth-scroll": "^16.1.3"
 	}
 }

@@ -1,4 +1,8 @@
 .music {
+    .header {
+        background-color: transparent;
+        position: absolute;
+    }
     .music-hero {
         padding: 80px 0px;
         text-align: center;
@@ -12,4 +16,5 @@
             }
         }
     }
+    
 }
