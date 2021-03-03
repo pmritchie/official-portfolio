@@ -1,9 +1,6 @@
 <?php
 
-// Required Files
-require get_template_directory().'/template-parts/items.php';
-require get_template_directory().'/template-parts/sections.php';
-// end
+
 
 add_filter('intermediate_image_sizes_advanced', 'prefix_remove_default_images');
 function prefix_remove_default_images($sizes)
@@ -25,10 +22,10 @@ function remove_wps_width_attribute($html)
 }
 
 // first run setup
-if (!function_exists('wpt_setup')) {
-    if (!is_admin()) {
+
+
         add_action('wp_enqueue_scripts', 'my_jquery_enqueue', 11);
-    }
+
 
     function my_jquery_enqueue()
     {
@@ -52,25 +49,6 @@ if (!function_exists('wpt_setup')) {
     }
     add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 
-//Save fields json
-function acf_json_save_point($path)
-{
-    return get_template_directory().'/includes/fields/json';
-}
-
-//Load fields json
-add_filter('acf/settings/save_json', 'acf_json_save_point');
-//---- Load JSON fields
-function acf_json_load_point($paths)
-{
-    unset($paths[0]);
-    $paths[] = get_template_directory().'/includes/fields/json/';
-
-    return $paths;
-}
-add_filter('acf/settings/load_json', 'acf_json_load_point');
-
-
     //Page Slug Body Class
     function add_slug_body_class($classes)
     {
@@ -82,31 +60,6 @@ add_filter('acf/settings/load_json', 'acf_json_load_point');
         return $classes;
     }
     add_filter('body_class', 'add_slug_body_class');
-
-    if (function_exists('acf_add_options_page')) {
-        acf_add_options_page([
-            'page_title' => 'Theme General Settings',
-            'menu_title' => 'Theme Settings',
-            'menu_slug' => 'theme-general-settings',
-            'capability' => 'edit_posts',
-            'redirect' => false,
-        ]);
-        acf_add_options_sub_page([
-            'page_title' => 'Theme Navigation Settings',
-            'menu_title' => 'Navigation',
-            'parent_slug' => 'theme-general-settings',
-        ]);
-        acf_add_options_sub_page([
-            'page_title' => 'Theme Social Media Settings',
-            'menu_title' => 'Social Media',
-            'parent_slug' => 'theme-general-settings',
-        ]);
-        acf_add_options_sub_page([
-            'page_title' => 'Theme Contact Settings',
-            'menu_title' => 'Contact',
-            'parent_slug' => 'theme-general-settings',
-        ]);
-    }
 
     function wpt_setup()
     {
@@ -152,7 +105,7 @@ add_filter('acf/settings/load_json', 'acf_json_load_point');
             'audio',
         ]);
     }
-}
+
 add_action('after_setup_theme', 'wpt_setup');
 // end
 
@@ -238,11 +191,9 @@ function wpt_widgets_init()
     {
         // Styles
         wp_enqueue_style('fontawesome-all-min', '//use.fontawesome.com/releases/v5.8.1/css/all.css', [], null);
-
         wp_enqueue_style('wpt-styles-main', get_template_directory_uri().'/css/style.css', [], null);
-
         wp_enqueue_script('script-custom-script', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js', [], null, true);
-        wp_enqueue_script('template-theme', get_template_directory_uri() . '/js/app.js', ['jquery'], null, true);
+        wp_enqueue_script('template-theme', get_template_directory_uri() . '/js/app.js', array('jquery'), true);
         
     }
 add_action('wp_enqueue_scripts', 'wpt_scripts', 99);

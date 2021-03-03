@@ -9,23 +9,24 @@ import SmoothScroll from 'smooth-scroll'
 
 console.log('testing')
 
-jQuery(document).ready(function () {
+$(document).ready(function () {
 
 
   const heroBtn = document.querySelector('#hero-button')
   heroBtn.addEventListener('click', e => {
+    console.log('click')
     var scroll = new SmoothScroll()
-    var anchor = document.querySelector('.about-me-section')
+    var anchor = document.querySelector('.about-section')
     scroll.animateScroll(anchor)
   })
   var scroll = $(window).scrollTop();
 
 
-  $("#button").click(function () {
-    $('html, body').animate({
-      scrollTop: $("#myDiv").offset().top
-    }, 2000);
-  });
+  // $("#button").click(function () {
+  //   $('html, body').animate({
+  //     scrollTop: $("#myDiv").offset().top
+  //   }, 2000);
+  // });
 
 
 });

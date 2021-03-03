@@ -97,6 +97,10 @@
       <?php while (have_rows('website_one')) : the_row(); ?> 
         <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
           <div class="feature-box">
+            <div class="fade-in-1">
+            <?php $img_one = get_sub_field('image_one'); ?>
+              <img src="<?php echo $img_one['url'] ?>" alt=""/>
+            </div>
             <h3><?php the_sub_field('website_title'); ?></h3>
             <p><?php the_sub_field('website_content'); ?></p>
             <?php $website_link = get_sub_field('website_link'); ?>
@@ -108,8 +112,12 @@
 
       <?php if (have_rows('website_two')) : ?>
       <?php while (have_rows('website_two')) : the_row(); ?> 
+      <?php $img_two = get_sub_field('image_two');?>
         <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
           <div class="feature-box">
+            <div class="fade-in-2">
+              <img src="<?php echo $img_two['url'] ?>" alt=""/>
+            </div>
             <h3><?php the_sub_field('website_title'); ?></h3>
             <p><?php the_sub_field('website_content'); ?></p>
             <?php $website_link = get_sub_field('website_link'); ?>
@@ -121,8 +129,12 @@
 
       <?php if (have_rows('website_three')) : ?>
       <?php while (have_rows('website_three')) : the_row(); ?> 
+      <?php $img_three = get_sub_field('image_three'); ?>
         <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
           <div class="feature-box">
+            <div class="fade-in-3">
+              <img src="<?php echo $img_three['url'] ?>" alt=""/>
+            </div>
             <h3><?php the_sub_field('website_title'); ?></h3>
             <p><?php the_sub_field('website_content'); ?></p>
             <?php $website_link = get_sub_field('website_link'); ?>
@@ -134,8 +146,12 @@
 
       <?php if (have_rows('website_four')) : ?>
       <?php while (have_rows('website_four')) : the_row(); ?> 
+      <?php $img_four = get_sub_field('image_four');?>
         <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
           <div class="feature-box">
+            <div class="fade-in-4">
+              <img src="<?php echo $img_four['url'] ?>" alt=""/>
+            </div>
             <h3><?php the_sub_field('website_title'); ?></h3>
             <p><?php the_sub_field('website_content'); ?></p>
             <?php $website_link = get_sub_field('website_link'); ?>
@@ -152,30 +168,3 @@
 <!--/Experience Section-->
 
 <?php get_footer(); ?>
-
-<div class="row image-row hero-images">
-    <?php $img_one = get_sub_field('image_one'); 
-          $img_two = get_sub_field('image_two');
-          $img_three = get_sub_field('image_three');
-          $img_four = get_sub_field('image_four');?>
-      <div class="col-3 image-col">
-        <div class="fade-in-1">
-          <img src="<?php echo $img_one['url'] ?>" alt=""/>
-        </div>
-      </div>
-      <div class="col-3 image-col">
-        <div class="fade-in-2">
-          <img src="<?php echo $img_two['url'] ?>" alt=""/>
-        </div>
-      </div>
-      <div class="col-3 image-col">
-        <div class="fade-in-3">
-          <img src="<?php echo $img_three['url'] ?>" alt=""/>
-        </div>
-      </div>
-      <div class="col-3 image-col">
-        <div class="fade-in-4">
-          <img src="<?php echo $img_four['url'] ?>" alt=""/>
-        </div>
-      </div>
-    </div>

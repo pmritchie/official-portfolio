@@ -3,15 +3,10 @@
   id="main-header"
   role="banner">
   <!-- nav -->
-  <?php require_once(get_template_directory() . '/template-parts/header-topbar.php'); ?>
   <nav class="navbar navbar-expand-xl navbar-light"
     role="navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a href="<?php echo esc_url(home_url()); ?>">
-      
-          <?php echo get_custom_logo(); ?>
-        </a>
       </div>
   
       <button class="navbar-toggler"
