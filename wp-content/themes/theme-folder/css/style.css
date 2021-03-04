@@ -11127,6 +11127,7 @@ header .container {
 .music .header {
   background-color: transparent;
   position: absolute;
+  top: 35px;
 }
 .music .music-hero {
   padding: 80px 0px;
@@ -11140,6 +11141,9 @@ header .container {
 .music .music-hero .hero-content h1,
 .music .music-hero .hero-content h3 {
   color: #fff;
+}
+.music .albumtrack {
+  visibility: visible !important;
 }
 
 .contact .hero-row {

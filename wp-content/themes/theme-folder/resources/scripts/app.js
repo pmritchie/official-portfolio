@@ -10,15 +10,19 @@ import SmoothScroll from 'smooth-scroll'
 console.log('testing')
 
 $(document).ready(function () {
+  var currentPage = get_page_vars
+  console.log(currentPage.currentPage)
+  if (get_page_vars.currentPage == '5-2') {
+    const heroBtn = document.querySelector('#hero-button')
+    heroBtn.addEventListener('click', e => {
+      console.log('click')
+      var scroll = new SmoothScroll()
+      var anchor = document.querySelector('.about-section')
+      scroll.animateScroll(anchor)
+    })
+  }
 
 
-  const heroBtn = document.querySelector('#hero-button')
-  heroBtn.addEventListener('click', e => {
-    console.log('click')
-    var scroll = new SmoothScroll()
-    var anchor = document.querySelector('.about-section')
-    scroll.animateScroll(anchor)
-  })
   var scroll = $(window).scrollTop();
 
 

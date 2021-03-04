@@ -1257,13 +1257,19 @@ __webpack_require__(/*! intersection-observer */ "./node_modules/intersection-ob
 
 console.log('testing');
 $(document).ready(function () {
-  var heroBtn = document.querySelector('#hero-button');
-  heroBtn.addEventListener('click', function (e) {
-    console.log('click');
-    var scroll = new smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default.a();
-    var anchor = document.querySelector('.about-section');
-    scroll.animateScroll(anchor);
-  });
+  var currentPage = get_page_vars;
+  console.log(currentPage.currentPage);
+
+  if (get_page_vars.currentPage == '5-2') {
+    var heroBtn = document.querySelector('#hero-button');
+    heroBtn.addEventListener('click', function (e) {
+      console.log('click');
+      var scroll = new smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default.a();
+      var anchor = document.querySelector('.about-section');
+      scroll.animateScroll(anchor);
+    });
+  }
+
   var scroll = $(window).scrollTop(); // $("#button").click(function () {
   //   $('html, body').animate({
   //     scrollTop: $("#myDiv").offset().top

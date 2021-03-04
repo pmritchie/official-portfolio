@@ -186,6 +186,19 @@ function wpt_widgets_init()
 }
 // end
 
+function getCurrentPage()
+{
+    global $post;
+
+    if ('post' == $post->post_type) {
+        $currentPage = 'post';
+    } else {
+        $currentPage = $post->post_name;
+    }
+
+    return $currentPage;
+}
+
 // Enqueue scripts and styles.
     function wpt_scripts()
     {
@@ -194,6 +207,12 @@ function wpt_widgets_init()
         wp_enqueue_style('wpt-styles-main', get_template_directory_uri().'/css/style.css', [], null);
         wp_enqueue_script('script-custom-script', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js', [], null, true);
         wp_enqueue_script('template-theme', get_template_directory_uri() . '/js/app.js', array('jquery'), true);
-        
+        wp_localize_script(
+            'template-theme',
+            'get_page_vars',
+            [
+                'currentPage' => getCurrentPage(),
+            ]
+        );
     }
 add_action('wp_enqueue_scripts', 'wpt_scripts', 99);
