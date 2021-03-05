@@ -60,10 +60,12 @@
 <?php if (have_rows('about_section')) : ?>
 <?php while (have_rows('about_section')) : the_row(); ?>
 <section class="section about-section" id="about-me">
-  <div id="box-one" class="box"> </div>
-  <div id="box-two" class="box"></div>
-  <div id="box-three" class="box"></div>
-  <div id="box-four" class="box"></div>
+  <div id="box-one" class="box"><span>&lt;html&gt;</span></div>
+  <div id="box-two" class="box"><span>function(){ .... }</span></div>
+  <div id="box-three" class="box"><span>Hello World!</span></div>
+  <div id="box-four" class="box"><span>WordPress</span></div>
+  <div id="box-five" class="box"><img src="/wp-content/uploads/2021/03/react-logo-1000-transparent.png"/><span>React JS</span></div>
+  <div id="box-six" class="box"><span>JS</span></div>
   <div class="container">
     <div class="row about-row">
       <div class="col-lg-8 col-sm-12">

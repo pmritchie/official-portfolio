@@ -66,45 +66,96 @@
         } 
     }
     .about-section {
-        text-align: center;
-        padding: 80px 0px;
-        position: relative;
-        .about-row {
-            justify-content: center;
-        }
-        h3 {
-            margin-bottom: 30px;
-        }
-        .box {
-            background-color: $light-blue;
-            position: absolute;
-        }
-        .move-one {
-            transition: 3s;
-            left: 20%;
-        }
 
-        .move-two {
-
+      text-align: center;
+      padding: 80px 0px;
+      position: relative;
+      .about-row {
+        justify-content: center;
+      }
+      h3 {
+        margin-bottom: 30px;
+      }
+      .box {
+        background-color: transparent;
+        position: absolute;
+      }
+      #box-one {
+        left: -55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 24px;
+          font-weight: 700;
+          color: $light-blue;
         }
-        .move-three {
-
+      }
+      #box-two {
+        top: -55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 20px;
+          font-weight: 700;
+          color: $light-blue;
         }
-        #box-one {
-            height: 50px;
-            width: 55px;
-            left: -55px;
+      }
+      #box-three {
+        right: -45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 24px;
+          font-weight: 700;
+          color: $light-blue;
         }
-        #box-two {
-            height: 55px;
-            width: 25px;
-            top: -55px
+      }
+      #box-four {
+        right: 10%;
+        top: -10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 24px;
+          font-weight: 700;
+          color: $light-blue;
         }
-        #box-three {
-            height: 45px;
-            width: 45px;
-            right: -45px;
+      }
+      #box-five {
+        right: 10%;
+        bottom: -10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+          max-width: 50px;
         }
+        span {
+          font-size: 32px;
+          font-weight: 700;
+          color: $purple-brown;
+        }
+      }
+      #box-six {
+        left: 10%;
+        bottom: -10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 36px;
+          font-weight: 700;
+          color: $sunflower-yellow-two;
+          border: solid 3px $sunflower-yellow-two;
+          background-color: $brown-grey;
+          padding: 0px 10px;
+        }
+      }
     }
     .experience-section {
         padding: 40px 0px;
