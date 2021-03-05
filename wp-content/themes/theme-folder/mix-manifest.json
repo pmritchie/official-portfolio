@@ -1,14 +1,4 @@
 {
-    "/dist/js/customizer.js": "/dist/js/customizer.js?id=246a16898a63b06a0633",
-    "/dist/js/customizer.js.map": "/dist/js/customizer.js.map?id=f18e14d1ce0ebf68c39e",
-    "/dist/js/editor.js": "/dist/js/editor.js?id=3519f6c3b6ffc89ff052",
-    "/dist/js/editor.js.map": "/dist/js/editor.js.map?id=1bfef8744ed55490a08c",
-    "/dist/js/manifest.js": "/dist/js/manifest.js?id=35fefc822368cea88338",
-    "/dist/js/manifest.js.map": "/dist/js/manifest.js.map?id=82a2b9fd707e835b1bb5",
-    "/dist/js/vendor.js": "/dist/js/vendor.js?id=4dbddd7ef3ce7947bc82",
-    "/dist/js/vendor.js.map": "/dist/js/vendor.js.map?id=263eb0da539b880867b2",
-    "/js/app.js": "/js/app.js?id=1a11f6cce2d69055b659",
-    "/css/style.css": "/css/style.css?id=2279b61367cb28e4c10c",
-    "/js/app.js.map": "/js/app.js.map?id=7823be48a6e88ca1e1ff",
-    "/css/style.css.map": "/css/style.css.map?id=1d8315c36e135abda315"
+    "/js/app.js": "/js/app.js",
+    "/css/style.css": "/css/style.css"
 }

@@ -1,9 +1,6 @@
 <?php
 
-// Required Files
-require get_template_directory().'/template-parts/items.php';
-require get_template_directory().'/template-parts/sections.php';
-// end
+
 
 add_filter('intermediate_image_sizes_advanced', 'prefix_remove_default_images');
 function prefix_remove_default_images($sizes)
@@ -25,10 +22,10 @@ function remove_wps_width_attribute($html)
 }
 
 // first run setup
-if (!function_exists('wpt_setup')) {
-    if (!is_admin()) {
+
+
         add_action('wp_enqueue_scripts', 'my_jquery_enqueue', 11);
-    }
+
 
     function my_jquery_enqueue()
     {
@@ -46,38 +43,11 @@ if (!function_exists('wpt_setup')) {
     }
     add_action('after_setup_theme', 'register_wpt_navwalker');
 
-    define('GOOGLE_FONTS', 'Open+Sans:400,500,600,700|Source+Sans+Pro:600,700');
-    /**
-     * Manage google fonts of load_google_font()
-     * set GOOGLE_FONTS constant in config.php.
-     */
-    function load_google_fonts()
+    function wpb_add_google_fonts()
     {
-        if (!defined('GOOGLE_FONTS')) {
-            return;
-        }
-        echo '<link href="https://fonts.googleapis.com/css?family='.GOOGLE_FONTS.'" rel="stylesheet" type="text/css" />'."\n";
+        wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab&family=Pangolin&family=Fjalla+One:400,700,800&display=swap', false);
     }
-    add_action('wp_head', 'load_google_fonts', 1);
-
-//Save fields json
-function acf_json_save_point($path)
-{
-    return get_template_directory().'/includes/fields/json';
-}
-
-//Load fields json
-add_filter('acf/settings/save_json', 'acf_json_save_point');
-//---- Load JSON fields
-function acf_json_load_point($paths)
-{
-    unset($paths[0]);
-    $paths[] = get_template_directory().'/includes/fields/json/';
-
-    return $paths;
-}
-add_filter('acf/settings/load_json', 'acf_json_load_point');
-
+    add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 
     //Page Slug Body Class
     function add_slug_body_class($classes)
@@ -90,31 +60,6 @@ add_filter('acf/settings/load_json', 'acf_json_load_point');
         return $classes;
     }
     add_filter('body_class', 'add_slug_body_class');
-
-    if (function_exists('acf_add_options_page')) {
-        acf_add_options_page([
-            'page_title' => 'Theme General Settings',
-            'menu_title' => 'Theme Settings',
-            'menu_slug' => 'theme-general-settings',
-            'capability' => 'edit_posts',
-            'redirect' => false,
-        ]);
-        acf_add_options_sub_page([
-            'page_title' => 'Theme Navigation Settings',
-            'menu_title' => 'Navigation',
-            'parent_slug' => 'theme-general-settings',
-        ]);
-        acf_add_options_sub_page([
-            'page_title' => 'Theme Social Media Settings',
-            'menu_title' => 'Social Media',
-            'parent_slug' => 'theme-general-settings',
-        ]);
-        acf_add_options_sub_page([
-            'page_title' => 'Theme Contact Settings',
-            'menu_title' => 'Contact',
-            'parent_slug' => 'theme-general-settings',
-        ]);
-    }
 
     function wpt_setup()
     {
@@ -160,7 +105,7 @@ add_filter('acf/settings/load_json', 'acf_json_load_point');
             'audio',
         ]);
     }
-}
+
 add_action('after_setup_theme', 'wpt_setup');
 // end
 
@@ -195,66 +140,6 @@ add_filter('embed_oembed_html', 'wpt_oembed_filter', 10, 4);
 add_filter('video_embed_html', 'wpt_oembed_filter');
 // end
 
-// facebook opengraph and twitter card meta add
-function wpt_doctype_opengraph($output)
-{
-    return $output.'
-		prefix="og: http://ogp.me/ns#"';
-}
-add_filter('language_attributes', 'wpt_doctype_opengraph');
-
-function wpt_social_meta()
-{
-    global $post;
-    if (is_single()) {
-        if (has_post_thumbnail($post->ID)) {
-            $img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
-        } else {
-            $img_src = '';
-        }
-
-        if ($excerpt = $post->post_excerpt) {
-            $excerpt = strip_tags($post->post_excerpt);
-            $excerpt = str_replace('', "'", $excerpt);
-        } else {
-            $excerpt = get_bloginfo('description');
-        } ?>
-
-<!-- facebook -->
-<meta property="og:type"
-	content="article" />
-<meta property="og:title"
-	content="<?php the_title(); ?>" />
-<meta property="og:description"
-	content="<?php echo esc_attr(strip_tags(get_the_excerpt())); ?>" />
-<meta property="og:url"
-	content="<?php the_permalink(); ?>" />
-<meta property="og:image"
-	content="<?php if (!empty($img_src)) {
-            echo esc_url($img_src[0]);
-        } ?>" />
-<meta property="og:site_name"
-	content="<?php bloginfo('name'); ?>" />
-<!-- twitter -->
-<meta name="twitter:card"
-	content="summary" />
-<meta name="twitter:title"
-	content="<?php the_title(); ?>" />
-<meta name="twitter:description"
-	content="<?php echo esc_attr(strip_tags(get_the_excerpt())); ?>" />
-<meta name="twitter:url"
-	content="<?php the_permalink(); ?>" />
-<meta name="twitter:image"
-	content="<?php if (!empty($img_src)) {
-            echo esc_url($img_src[0]);
-        } ?>" />
-<?php
-    } else {
-        return;
-    }
-}
-add_action('wp_head', 'wpt_social_meta', 5);
-// end
 
 // Mega Menu
 add_filter('walker_nav_menu_start_el', 'wpt_desktop_menu', 10, 4);
@@ -301,18 +186,33 @@ function wpt_widgets_init()
 }
 // end
 
+function getCurrentPage()
+{
+    global $post;
+
+    if ('post' == $post->post_type) {
+        $currentPage = 'post';
+    } else {
+        $currentPage = $post->post_name;
+    }
+
+    return $currentPage;
+}
+
 // Enqueue scripts and styles.
-if (!function_exists('wpt_scripts')) {
     function wpt_scripts()
     {
         // Styles
         wp_enqueue_style('fontawesome-all-min', '//use.fontawesome.com/releases/v5.8.1/css/all.css', [], null);
-
         wp_enqueue_style('wpt-styles-main', get_template_directory_uri().'/css/style.css', [], null);
-
         wp_enqueue_script('script-custom-script', '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js', [], null, true);
-        wp_register_script('template-theme', get_template_directory_uri().'/js/app.js', ['jquery'], null, true);
-        wp_enqueue_script('template-theme');
+        wp_enqueue_script('template-theme', get_template_directory_uri() . '/js/app.js', array('jquery'), true);
+        wp_localize_script(
+            'template-theme',
+            'get_page_vars',
+            [
+                'currentPage' => getCurrentPage(),
+            ]
+        );
     }
-}
-add_action('wp_enqueue_scripts', 'wpt_scripts');
+add_action('wp_enqueue_scripts', 'wpt_scripts', 99);

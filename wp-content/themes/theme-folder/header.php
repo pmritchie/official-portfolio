@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="<?php language_attributes() ?>">
+<!doctype html>
+<html <?php language_attributes() ?>>
 
 
 	<head>
@@ -9,10 +9,8 @@
 		<link rel="pingback"
 			href="<?php bloginfo('pingback_url'); ?>" />
 		<?php wp_head() ?>
-
-
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> >
 
 		<?php get_template_part('template-parts/menu'); ?>

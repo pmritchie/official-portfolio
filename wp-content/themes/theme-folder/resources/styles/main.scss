@@ -77,10 +77,13 @@
 @import 'components/buttons';
 @import 'components/bottom-contact-partial';
 @import 'components/modal';
+@import 'components/typing-headline';
 
 // Theme aka global
 @import 'theme/theme';
 
 // Pages
-
+@import 'pages/home-page';
+@import 'pages/music-page';
+@import 'pages/contact-page';
 

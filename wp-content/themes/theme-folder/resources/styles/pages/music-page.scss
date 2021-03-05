@@ -1,0 +1,23 @@
+.music {
+    .header {
+        background-color: transparent;
+        position: absolute;
+        top: 35px;
+    }
+    .music-hero {
+        padding: 80px 0px;
+        text-align: center;
+        background: url('/wp-content/uploads/2021/02/IMG_2442-scaled.jpg') no-repeat; 
+        background-size: cover;
+        .hero-content {
+            padding: 50px 0px;
+            h1,
+            h3 {
+            color: #fff;
+            }
+        }
+    } 
+    .albumtrack{
+        visibility: visible !important;
+    } 
+}
