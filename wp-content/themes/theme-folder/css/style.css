@@ -11184,25 +11184,118 @@ header .container {
   position: absolute;
   top: 35px;
 }
-.music .music-hero {
-  padding: 80px 0px;
-  text-align: center;
-  background: url("/wp-content/uploads/2021/02/IMG_2442-scaled.jpg") no-repeat;
-  background-size: cover;
-}
-.music .music-hero .hero-content {
-  padding: 50px 0px;
-}
-.music .music-hero .hero-content h1,
-.music .music-hero .hero-content h3 {
-  color: #fff;
-}
-.music .albumtrack {
-  visibility: visible !important;
+.music .song-section {
+  padding: 10% 0 0;
+  background-color: #c2d1d9;
 }
 .music .song-section .song-row {
-  justify-content: center;
+  justify-content: flex-end;
+  position: relative;
 }
+.music .song-section .song-row .heading-col {
+  text-align: right;
+}
+.music .song-section .song-row .heading-col h2 {
+  margin: 15px 0px;
+  font-weight: 600;
+}
+.music .song-section .song-row .heading-col h2 {
+  font-size: 32px;
+}
+@media screen and (min-width: 480px) {
+  .music .song-section .song-row .heading-col h2 {
+    font-size: calc( 32px + 40 * ((100vw - 480px) / 660) );
+  }
+}
+@media screen and (min-width: 1140px) {
+  .music .song-section .song-row .heading-col h2 {
+    font-size: 72px;
+  }
+}
+.music .song-section .song-row .heading-col p {
+  font-size: 24px;
+}
+@media screen and (min-width: 480px) {
+  .music .song-section .song-row .heading-col p {
+    font-size: calc( 24px + 22 * ((100vw - 480px) / 660) );
+  }
+}
+@media screen and (min-width: 1140px) {
+  .music .song-section .song-row .heading-col p {
+    font-size: 46px;
+  }
+}
+.music .song-section .media-player {
+  width: 100%;
+  right: -2%;
+  position: relative;
+  padding: 30px;
+  border-top-left-radius: 20px;
+  background-color: #F56960;
+  box-shadow: 0px 8px 8px 0px;
+}
+.music .song-section .media-player p {
+  font-weight: 400;
+}
+.music .song-section .media-player p {
+  font-size: 24px;
+}
+@media screen and (min-width: 480px) {
+  .music .song-section .media-player p {
+    font-size: calc( 24px + 18 * ((100vw - 480px) / 660) );
+  }
+}
+@media screen and (min-width: 1140px) {
+  .music .song-section .media-player p {
+    font-size: 42px;
+  }
+}
+.music .song-section .media-player .spokes {
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 70%;
+  z-index: 3;
+}
+.music .song-section .media-player .spokes:nth-of-type(1) {
+  right: 15%;
+}
+.music .song-section .media-player .spokes:nth-of-type(2) {
+  right: 70%;
+}
+.music .song-section .media-player .track {
+  margin: 0 33% 30px;
+  width: 40%;
+}
+.music .song-section .media-player .songtitle,
+.music .song-section .media-player .songwriter {
+  color: white;
+}
+.music .song-section .media-player .albumtrack {
+  visibility: visible !important;
+}
+.music .song-section .media-player .albumtrack .mejs-controls,
+.music .song-section .media-player .albumtrack .mejs-container {
+  border-radius: 20px 0 0 20px !important;
+  right: -2%;
+}
+.music .song-section .media-player .audioalbum {
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  font-weight: 400;
+  background-image: linear-gradient(#231e21 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+}
+.music .footer, .music .footer__social__media ul, .footer__social__media .music ul, .music .footer__menu {
+  position: relative;
+  bottom: 0;
+}
+
 .contact .hero-row {
   justify-content: space-around;
   margin: 50px 0px;
