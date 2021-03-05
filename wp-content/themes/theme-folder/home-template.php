@@ -63,7 +63,7 @@
   <div id="box-one" class="box"><span>&lt;html&gt;</span></div>
   <div id="box-two" class="box"><span>function(){ .... }</span></div>
   <div id="box-three" class="box"><span>Hello World!</span></div>
-  <div id="box-four" class="box"><span>WordPress</span></div>
+  <div id="box-four" class="box"><img src="/wp-content/uploads/2021/03/wordpress_logo.png"/></div>
   <div id="box-five" class="box"><img src="/wp-content/uploads/2021/03/react-logo-1000-transparent.png"/><span>React JS</span></div>
   <div id="box-six" class="box"><span>JS</span></div>
   <div class="container">
