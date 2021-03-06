@@ -1268,35 +1268,49 @@ $(document).ready(function () {
       console.log(bxTwoTrigger);
 
       if (bxTwoTrigger <= window_top_position) {
+        $(".box").css({
+          "animation": "fadeIn ease 1s",
+          "-webkit-animation": "fadeIn ease 1s",
+          "-moz-animation": "fadeIn ease 1s",
+          "-o-animation": "fadeIn ease 1s",
+          "-ms-animation": "fadeIn ease 1s"
+        });
         $("#box-one").animate({
-          left: "14%"
+          left: "10%"
         }, 1000);
         $("#box-one").css({
-          '-webkit-transform': 'rotate(' + -45 + 'deg)',
-          '-moz-transform': 'rotate(' + -45 + 'deg)',
-          '-ms-transform': 'rotate(' + -45 + 'deg)',
-          'transform': 'rotate(' + -45 + 'deg)'
+          '-webkit-transform': 'rotate(' + -30 + 'deg)',
+          '-moz-transform': 'rotate(' + -30 + 'deg)',
+          '-ms-transform': 'rotate(' + -30 + 'deg)',
+          'transform': 'rotate(' + -30 + 'deg)'
         });
         $("#box-two").animate({
-          top: "33%",
-          left: "15%"
+          left: "10%",
+          top: "40%"
         }, 1000);
         $("#box-three").animate({
-          right: "16%",
-          top: "160px"
+          right: "10%",
+          top: "15%"
         }, 1000);
         $("#box-four").animate({
-          right: "13%",
-          top: "130px"
+          right: "11%",
+          top: "35%"
         }, 1000);
         $("#box-five").animate({
-          right: "15%",
-          top: "130px"
+          right: "10%",
+          bottom: "25%"
         }, 1000);
         $("#box-six").animate({
           left: "10%",
-          top: "200px"
+          bottom: "25%"
         }, 1000);
+        $("#box-six").css({
+          'box-shadow': '0px 8px 8px 8px',
+          '-webkit-transform': 'rotate(' + 30 + 'deg)',
+          '-moz-transform': 'rotate(' + 30 + 'deg)',
+          '-ms-transform': 'rotate(' + 30 + 'deg)',
+          'transform': 'rotate(' + 30 + 'deg)'
+        });
         $("#box-sever").animate({
           right: "16%",
           top: "160px"
