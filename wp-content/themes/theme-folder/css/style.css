@@ -11305,3 +11305,23 @@ header .container {
 .contact .hero-row .form-column {
   margin-top: 45px;
 }
+
+.resume .row {
+  justify-content: center;
+}
+.resume .row .resume-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.resume .row h1 {
+  margin: 50px 0;
+}
+.resume .row h3 {
+  margin-bottom: 50px;
+}
+.resume .row img {
+  max-width: 75%;
+}
