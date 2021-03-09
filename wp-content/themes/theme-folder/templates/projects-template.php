@@ -24,23 +24,21 @@
 <?php if (have_rows('project_section')) : ?>
 <?php while (have_rows('project_section')) : the_row(); ?>
 <section class="section project-section">
-  <div class="container">
+  <div class="container-fluid">
     <?php if (have_rows('project_one')) : ?>
     <?php while (have_rows('project_one')) : the_row(); ?> 
-    <div class="row project-row">
+    <div class="row project-row first-row">
         <div class="col-5 project-col"> 
-            <?php $image_one = get_sub_field('image_one'); 
-                    $image_two = get_sub_field('image_two'); ?> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_one['url']; ?>"/> 
+                <img src="/wp-content/uploads/2021/03/ott_1.png" alt="website screen shot"/> 
             </div> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_two['url'];?>"  />
+                <img src="/wp-content/uploads/2021/03/ott_2.png"   alt="website screen shot"/>
             </div>
         </div>
         <div class="col-5 project-col">  
-            <h3><?php the_sub_field('project_title'); ?></h3>
-            <p class="content"><?php the_sub_field('project_content');?></p>
+            <h3><?php the_sub_field('title'); ?></h3>
+            <p class="content"><?php the_sub_field('content');?></p>
         </div>
     </div>
     <?php endwhile; ?>
@@ -48,20 +46,21 @@
 
     <?php if (have_rows('project_two')) : ?>
     <?php while (have_rows('project_two')) : the_row(); ?> 
-    <div class="row project-row">
+    <div class="row project-row second-row">
         <div class="col-5 project-col"> 
-            <?php $image_one = get_sub_field('image_one'); 
-                    $image_two = get_sub_field('image_two'); ?> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_one['url']; ?>"/> 
+                <img src="/wp-content/uploads/2021/03/emindful_1.png" alt="website screen shot"/> 
             </div> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_two['url'];?>" />
+                <img src="/wp-content/uploads/2021/03/emindful_2.png"   alt="website screen shot"/>
+            </div>
+            <div class="img-wrapper">
+                <img src="/wp-content/uploads/2021/03/emindful_3.png"   alt="website screen shot"/>
             </div>
         </div>
         <div class="col-5 project-col">  
-            <h3><?php the_sub_field('project_title'); ?></h3>
-            <p class="content"><?php the_sub_field('project_content');?></p>
+            <h3><?php the_sub_field('title'); ?></h3>
+            <p class="content"><?php the_sub_field('content');?></p>
         </div>
     </div>
     <?php endwhile; ?>
@@ -71,18 +70,19 @@
     <?php while (have_rows('project_three')) : the_row(); ?>      
     <div class="row project-row">
         <div class="col-5 project-col"> 
-            <?php $image_one = get_sub_field('image_one'); 
-                    $image_two = get_sub_field('image_two'); ?> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_one['url']; ?>"/> 
+                <img src="/wp-content/uploads/2021/03/sscf_1.png" alt="website screen shot"/> 
             </div> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_two['url'];?>"/>
+                <img src="/wp-content/uploads/2021/03/sscf_2.png"   alt="website screen shot"/>
+            </div>
+            <div class="img-wrapper">
+                <img src="/wp-content/uploads/2021/02/sscf_3.png"   alt="website screen shot"/>
             </div>
         </div>
         <div class="col-5 project-col">  
-            <h3><?php the_sub_field('project_title'); ?></h3>
-            <p class="content"><?php the_sub_field('project_content');?></p>
+            <h3><?php the_sub_field('title'); ?></h3>
+            <p class="content"><?php the_sub_field('content');?></p>
         </div>
     </div>
     <?php endwhile; ?>
@@ -92,18 +92,19 @@
     <?php while (have_rows('project_four')) : the_row(); ?>
     <div class="row project-row">
         <div class="col-5 project-col"> 
-            <?php $image_one = get_sub_field('image_one'); 
-                    $image_two = get_sub_field('image_two'); ?> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_one['url']; ?>"/> 
+                <img src="/wp-content/uploads/2021/03/bio_1.png" alt="website screen shot"/> 
             </div> 
             <div class="img-wrapper">
-                <img src="<?php echo $image_two['url'];?>"/>
+                <img src="/wp-content/uploads/2021/03/bio_2.png"   alt="website screen shot"/>
+            </div>
+            <div class="img-wrapper">
+                <img src="/wp-content/uploads/2021/03/bio_mobile1.png"   alt="website screen shot"/>
             </div>
         </div>
         <div class="col-5 project-col">  
-            <h3><?php the_sub_field('project_title'); ?></h3>
-            <p class="content"><?php the_sub_field('project_content');?></p>
+            <h3><?php the_sub_field('title'); ?></h3>
+            <p class="content"><?php the_sub_field('content');?></p>
         </div>
     </div>
     <?php endwhile; ?>
