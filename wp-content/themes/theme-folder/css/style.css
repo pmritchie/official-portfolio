@@ -10313,6 +10313,10 @@ header {
   position: fixed;
 }
 
+header {
+  background-color: transparent;
+  position: absolute;
+}
 header .dropdown-menu {
   margin: 0;
 }
@@ -10832,6 +10836,24 @@ header .container {
   }
 }
 
+.wpcf7 {
+  width: 400px;
+}
+.wpcf7 form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.wpcf7 form p {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  align-items: center;
+}
+.wpcf7 form .ajax-loader {
+  position: absolute;
+}
+
 /*Dropdown Css*/
 .dropdown-menu {
   background: #04aed8;
@@ -10892,7 +10914,7 @@ header .container {
 
 .home .hero-section {
   position: relative;
-  padding: 150px 0px 193px;
+  padding: 200px 0px 193px;
   overflow: hidden;
   background-color: #04aed8;
   text-align: center;
@@ -11136,54 +11158,6 @@ header .container {
   }
 }
 
-.fade-in-1 {
-  animation: fadeIn ease 7s;
-  -webkit-animation: fadeIn ease 7s;
-  -moz-animation: fadeIn ease 7s;
-  -o-animation: fadeIn ease 7s;
-  -ms-animation: fadeIn ease 7s;
-}
-
-.fade-in-2 {
-  animation: fadeIn ease 9s;
-  -webkit-animation: fadeIn ease 9s;
-  -moz-animation: fadeIn ease 9s;
-  -o-animation: fadeIn ease 9s;
-  -ms-animation: fadeIn ease 9s;
-}
-
-.fade-in-3 {
-  animation: fadeIn ease 11s;
-  -webkit-animation: fadeIn ease 11s;
-  -moz-animation: fadeIn ease 11s;
-  -o-animation: fadeIn ease 11s;
-  -ms-animation: fadeIn ease 11s;
-}
-
-.fade-in-4 {
-  animation: fadeIn ease 13s;
-  -webkit-animation: fadeIn ease 13s;
-  -moz-animation: fadeIn ease 13s;
-  -o-animation: fadeIn ease 13s;
-  -ms-animation: fadeIn ease 13s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.music .header {
-  background-color: transparent;
-  position: absolute;
-  top: 35px;
-}
 .music .song-section {
   padding: 10% 0 0;
   background-color: #c2d1d9;
@@ -11295,6 +11269,18 @@ header .container {
   bottom: 0;
 }
 
+.contact {
+  background-color: #ECDD7B;
+}
+.contact .section {
+  margin-top: 140px;
+}
+.contact .header .nav-link {
+  background-color: rgba(255, 255, 255, 0.377);
+}
+.contact .header .nav-link:hover {
+  color: black !important;
+}
 .contact .hero-row {
   justify-content: space-around;
   margin: 50px 0px;
@@ -11304,8 +11290,22 @@ header .container {
 }
 .contact .hero-row .form-column {
   margin-top: 45px;
+  display: flex;
+  justify-content: center;
 }
 
+.resume {
+  background-color: rgba(102, 179, 58, 0.541);
+}
+.resume .header .nav-link {
+  background-color: rgba(255, 255, 255, 0.377);
+}
+.resume .header .nav-link:hover {
+  color: black !important;
+}
+.resume .resume-section {
+  margin-top: 140px;
+}
 .resume .row {
   justify-content: center;
 }
@@ -11324,4 +11324,21 @@ header .container {
 }
 .resume .row img {
   max-width: 75%;
+  box-shadow: 0px 8px 8px 0px;
+}
+
+.projects {
+  background-color: rgba(102, 179, 58, 0.541);
+}
+.projects .header .nav-link {
+  background-color: rgba(255, 255, 255, 0.377);
+}
+.projects .header .nav-link:hover {
+  color: black !important;
+}
+.projects .hero-section {
+  margin-top: 140px;
+}
+.projects .row {
+  justify-content: center;
 }
