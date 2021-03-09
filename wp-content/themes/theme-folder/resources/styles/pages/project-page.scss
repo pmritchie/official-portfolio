@@ -1,0 +1,18 @@
+.projects {
+    background-color: rgba(102, 179, 58, 0.541);
+    .header {
+        .nav-link {
+            background-color: rgba(255, 255, 255, 0.377);
+            &:hover {
+              color: black !important;
+            }
+          }
+          
+    }
+    .hero-section {
+        margin-top: 140px;
+    }
+    .row {
+        justify-content: center;
+    }
+}

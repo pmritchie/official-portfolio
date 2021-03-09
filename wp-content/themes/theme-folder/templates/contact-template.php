@@ -11,6 +11,7 @@
         <div class="hero-content">
           <h1><?php the_sub_field('contact_title'); ?></h1>
           <p><?php the_sub_field('contact_content');?></p>
+          <img src="/wp-content/uploads/2021/03/O4YILM0.jpg" />
         </div>
       </div>
       <div class="col-5 form-column">
