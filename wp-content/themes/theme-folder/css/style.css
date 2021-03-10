@@ -11328,7 +11328,7 @@ header .container {
 }
 
 .projects {
-  background-color: rgba(102, 179, 58, 0.541);
+  background-color: #7d7c7c;
 }
 .projects .header .nav-link {
   background-color: rgba(255, 255, 255, 0.377);
@@ -11337,26 +11337,70 @@ header .container {
   color: black !important;
 }
 .projects .hero-section {
-  margin-top: 140px;
+  margin: 140px 0px;
+  text-align: center;
 }
 .projects .project-section .row {
+  padding: 20px 0;
   justify-content: center;
 }
 .projects .project-section .row:nth-of-type(1) {
-  background-color: #fdce00;
+  background: linear-gradient(to right, #fdce00 0%, #fdce00 50%, #fdce00 50%, #fff 50%, #fff 100%);
 }
 .projects .project-section .row:nth-of-type(2) {
-  background-color: #c4bcf6;
+  background: linear-gradient(to right, #fff 0%, #fff 50%, #fff 50%, #c4bcf6 50%, #c4bcf6 100%);
   flex-direction: row-reverse;
 }
 .projects .project-section .row:nth-of-type(3) {
+  background: linear-gradient(to right, #4b3793 0%, #4b3793 50%, #4b3793 50%, #fff 50%, #fff 100%);
   background-color: #4b3793;
 }
 .projects .project-section .row:nth-of-type(4) {
+  background: linear-gradient(to right, #fff 0%, #fff 50%, #fff 50%, #4ab1ba 50%, #4ab1ba 100%);
   background-color: #4ab1ba;
   flex-direction: row-reverse;
 }
+.projects .project-section .row .project-col,
+.projects .project-section .row .content-col {
+  position: relative;
+}
+.projects .project-section .row .content-col {
+  margin: 50px 0 150px;
+}
 .projects .project-section .img-wrapper {
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
+  position: absolute;
+  box-shadow: 0 8px 8px 0px black;
+  border: solid 15px white;
+  background-color: white;
+}
+.projects .project-section .img-wrapper:nth-of-type(1) {
+  z-index: 0;
+}
+.projects .project-section .img-wrapper:nth-of-type(2) {
+  left: 33%;
+  top: 20%;
+  z-index: 1;
+}
+.projects .project-section .img-wrapper:nth-of-type(3) {
+  top: 35%;
+  left: 10%;
+  z-index: 2;
+}
+.projects .project-section .mobile-img {
+  width: 100%;
+  max-width: 100px;
+  border: solid 5px white;
+  position: absolute;
+}
+.projects .project-section .mobile-img:nth-of-type(3) {
+  top: 35%;
+  left: 10%;
+  z-index: 3;
+}
+.projects .project-section .mobile-img:nth-of-type(4) {
+  top: 35%;
+  left: 10%;
+  z-index: 4;
 }
