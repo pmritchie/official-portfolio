@@ -68,7 +68,7 @@ function remove_wps_width_attribute($html)
         add_theme_support('title-tag');
 
         add_theme_support('editor-styles');
-        add_editor_style('assets/om-editor.css');
+   
 
         //register nav menus
         register_nav_menus([

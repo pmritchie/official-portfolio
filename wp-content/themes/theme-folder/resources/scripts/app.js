@@ -10,6 +10,16 @@ import SmoothScroll from 'smooth-scroll'
 console.log('testing')
 
 $(document).ready(function () {
+  var windowWidth = $(window).width(); 
+  console.log('width :' + windowWidth)
+  if (windowWidth <= 1000) {
+    if ($(document).scrollTop() == 0) {
+      console.log()
+      $("#main-header").removeClass("is-sticky");
+    } else {
+      $("#main-header").addClass("is-sticky");
+    }
+  }
 
 
   var currentPage = get_page_vars
@@ -30,7 +40,7 @@ $(document).ready(function () {
     function check_if_in_view() {   
       var window_top_position = $window.scrollTop();
       var bxTwo = $animation_trigger.offset ();
-      var windowWidth = $(window).width(); 
+
       var bxTwoTrigger = bxTwo.top - bxTwo.top * .3;
       console.log(bxTwoTrigger)
       if (windowWidth >= 1000) {
@@ -61,7 +71,7 @@ $(document).ready(function () {
           });
           $("#box-sever").animate({right: "16%", top: "160px"}, 1000);
         }
-}
+    }
     
     }
     
@@ -87,12 +97,7 @@ $(document).ready(function () {
 // $(window).scroll(function () {
   
  
-//   if ($(document).scrollTop() == 0) {
-//     console.log()
-//     $("#main-header").removeClass("is-sticky");
-//   } else {
-//     $("#main-header").addClass("is-sticky");
-//   }
+
 
 //   if ($(document).scrollTop() == 100) {
 //     $("#box-one").addClass("move");
