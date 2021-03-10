@@ -7,7 +7,7 @@
         text-align: center;
         .title-row {
             h1 {
-                font-size: 96px;
+                @include fluid-font(45px, 96px);
                 font-weight: 800;
                 font-family: $font-family-sans-serif;
             }
@@ -80,6 +80,9 @@
         background-color: transparent;
         position: absolute;
         visibility: none;
+        @include media-breakpoint-down(md) {
+          display: none !important;
+        }
 
       }
       #box-one {

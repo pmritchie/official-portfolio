@@ -10920,9 +10920,21 @@ header .container {
   text-align: center;
 }
 .home .hero-section .title-row h1 {
-  font-size: 96px;
   font-weight: 800;
   font-family: "Fjalla One", sans-serif;
+}
+.home .hero-section .title-row h1 {
+  font-size: 45px;
+}
+@media screen and (min-width: 480px) {
+  .home .hero-section .title-row h1 {
+    font-size: calc( 45px + 51 * ((100vw - 480px) / 660) );
+  }
+}
+@media screen and (min-width: 1140px) {
+  .home .hero-section .title-row h1 {
+    font-size: 96px;
+  }
 }
 .home .hero-section .title-row .hero-content {
   padding: 40px 0px;
@@ -10992,6 +11004,11 @@ header .container {
   background-color: transparent;
   position: absolute;
   visibility: none;
+}
+@media (max-width: 991.98px) {
+  .home .about-section .box {
+    display: none !important;
+  }
 }
 .home .about-section #box-one {
   left: -15%;
