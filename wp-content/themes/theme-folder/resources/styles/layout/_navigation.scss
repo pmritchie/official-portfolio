@@ -8,7 +8,7 @@ header {
   }
 
   .dropdown-menu.show {
-    background: $light-blue;
+    background: $gray-400;
   }
   .dropdown-toggle {
     &:focus {
@@ -19,9 +19,13 @@ header {
     padding-top: 38px;
     justify-content: flex-end;
     background-color: transparent;
-    @include media-breakpoint-down(lg) {
-      right: -5px;
+    #menu-primary-menu {
+      @include media-breakpoint-down(sm) {
+        padding-top: 0px;
+        background-color: $gray-400;
+      }
     }
+
   }
 
   .container {
@@ -117,8 +121,8 @@ header {
           }
         }
         margin-right: 25px;
-        @include media-breakpoint-down(lg) {
-          margin-right: 0px;
+        @include media-breakpoint-down(sm) {
+            margin-right: 0px;
         }
       }
 

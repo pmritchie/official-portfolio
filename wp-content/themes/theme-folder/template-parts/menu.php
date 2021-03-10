@@ -3,7 +3,7 @@
   id="main-header"
   role="banner">
   <!-- nav -->
-  <nav class="navbar navbar-expand-xl navbar-light"
+  <nav class="navbar navbar-expand-md navbar-light"
     role="navigation">
     <div class="container">
       <div class="navbar-brand">

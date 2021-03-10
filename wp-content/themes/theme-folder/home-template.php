@@ -97,7 +97,7 @@
     <div class="row feature-row">
     <?php if (have_rows('website_one')) : ?>
       <?php while (have_rows('website_one')) : the_row(); ?> 
-        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+        <div class="col-lg-5 col-md-6 col-sm-6 feature-col">
           <div class="feature-box">
             <div class="fade-in-1">
             <?php $img_one = get_sub_field('image_one'); ?>
@@ -115,7 +115,7 @@
       <?php if (have_rows('website_two')) : ?>
       <?php while (have_rows('website_two')) : the_row(); ?> 
       <?php $img_two = get_sub_field('image_two');?>
-        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+        <div class="col-lg-5 col-md-6 col-sm-6 feature-col">
           <div class="feature-box">
             <div class="fade-in-2">
               <img src="<?php echo $img_two['url'] ?>" alt=""/>
@@ -132,7 +132,7 @@
       <?php if (have_rows('website_three')) : ?>
       <?php while (have_rows('website_three')) : the_row(); ?> 
       <?php $img_three = get_sub_field('image_three'); ?>
-        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+        <div class="col-lg-5 col-md-6 col-sm-6 feature-col">
           <div class="feature-box">
             <div class="fade-in-3">
               <img src="<?php echo $img_three['url'] ?>" alt=""/>
@@ -149,7 +149,7 @@
       <?php if (have_rows('website_four')) : ?>
       <?php while (have_rows('website_four')) : the_row(); ?> 
       <?php $img_four = get_sub_field('image_four');?>
-        <div class="col-lg-5 col-md-4 col-sm-6 feature-col">
+        <div class="col-lg-5 col-md-6 col-sm-6 feature-col">
           <div class="feature-box">
             <div class="fade-in-4">
               <img src="<?php echo $img_four['url'] ?>" alt=""/>
