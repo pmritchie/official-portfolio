@@ -1,5 +1,5 @@
 .projects {
-    background-color: rgba(102, 179, 58, 0.541);
+    background-color: $brown-grey;
     .header {
         .nav-link {
             background-color: rgba(255, 255, 255, 0.377);
@@ -10,9 +10,81 @@
           
     }
     .hero-section {
-        margin-top: 140px;
+        margin: 140px 0px;
+        text-align: center;
+
     }
-    .row {
-        justify-content: center;
+    .project-section {
+        .row {
+            padding: 20px 0;
+            &:nth-of-type(1){
+                background: linear-gradient(to right, #fdce00 0%, #fdce00 50%, #fdce00 50%,#fff 50%,#fff 100%);
+            }
+            &:nth-of-type(2){
+                background: linear-gradient(to right, #fff 0%, #fff 50%, #fff 50%,#c4bcf6 50%,#c4bcf6 100%);
+                flex-direction: row-reverse;
+            }
+            &:nth-of-type(3){
+                background: linear-gradient(to right, #4b3793 0%, #4b3793 50%, #4b3793 50%,#fff 50%,#fff 100%);
+                background-color:  #4b3793;
+            }
+            &:nth-of-type(4){
+                background: linear-gradient(to right, #fff 0%, #fff 50%, #fff 50%,#4ab1ba 50%,#4ab1ba 100%);
+                background-color: #4ab1ba;
+                flex-direction: row-reverse;
+            }
+            justify-content: center;
+            .project-col,
+            .content-col {
+                position: relative;
+            }
+            .content-col {
+                margin: 50px 0 150px;
+            }
+            .project-col {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .img-wrapper {
+            width: 100%;
+            max-width: 350px;
+            position: relative;
+            box-shadow: 0 8px 8px 0px black;
+            border: solid 15px white;
+            background-color: white;
+            &:nth-of-type(1){
+                z-index: 0;
+                left: -20%;
+                top: 15%;
+            }
+            &:nth-of-type(2){
+                left: 10%;
+                top: 0%;
+                z-index: 1;
+            }
+            &:nth-of-type(3){
+                left: -5%;
+                top: -10%;
+                z-index: 2;
+            }    
+        }
+        .mobile-img {
+            width: 100%;
+            max-width: 100px;
+            border: solid 5px white;
+            position: relative;
+            &:nth-of-type(3){
+                top: -15%;
+                left: -5%;
+                z-index: 3;
+            }
+            &:nth-of-type(4){
+                top: -25%;
+                left: 20%;
+                z-index: 4;
+            }
+
+        }
     }
 }
