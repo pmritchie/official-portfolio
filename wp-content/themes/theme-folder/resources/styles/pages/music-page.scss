@@ -24,10 +24,14 @@
             border-radius: 20px 20px 0 0;
             background-color: $bittersweet;
             box-shadow: 0px 8px 8px 0px;
+            position: relative;
             p {
                 @include fluid-font(24px, 42px); 
                 font-weight: 400;
                 margin-bottom: 60px;
+                @include media-breakpoint-down(sm){
+                    margin-bottom: 20px;
+                }
             }
             .spokes {
                 width: 100%;
@@ -37,18 +41,44 @@
                 border-radius: 50%;
                 background-color: white;
                 position: absolute;
+                padding: 70px;
                 top: 70%;
-                z-index: 0;
                 &:nth-of-type(1){
-                    right: 15%
+                    right: 13%
                 }
                 &:nth-of-type(2){
-                    left: 15%;
+                    left: 13%;
                 }
+                @include media-breakpoint-down(md) {
+                    &:nth-of-type(1){
+                        right: 8%
+                    }
+                    &:nth-of-type(2){
+                        left: 8%;
+                    }
+                  }
+                @include media-breakpoint-down(sm) {
+                    &:nth-of-type(1){
+                        display: none;
+                    }
+                    &:nth-of-type(2){
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                  }
+
             }
             .track {
                 margin: 0 30% 0;
                 width: 40%;
+                @include media-breakpoint-down(sm){
+                    margin: 0 auto;
+                    width: 75%;
+                    &:last-of-type {
+                        margin-bottom: 100px;
+                    }
+                }
             }
             .songtitle,
             .songwriter {
