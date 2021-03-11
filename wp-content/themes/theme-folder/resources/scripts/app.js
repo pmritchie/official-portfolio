@@ -7,27 +7,12 @@ import lozad from "lozad";
 import retina from "retinajs";
 import SmoothScroll from 'smooth-scroll'
 
-console.log('testing')
 
 $(document).ready(function () {
-  var windowWidth = $(window).width(); 
-  console.log('width :' + windowWidth)
-  if (windowWidth <= 1000) {
-    if ($(document).scrollTop() == 0) {
-      console.log()
-      $("#main-header").removeClass("is-sticky");
-    } else {
-      $("#main-header").addClass("is-sticky");
-    }
-  }
-
-
   var currentPage = get_page_vars
-  console.log(currentPage.currentPage)
   if (get_page_vars.currentPage == '5-2') {
     const heroBtn = document.querySelector('#hero-button')
     heroBtn.addEventListener('click', e => {
-      console.log('click')
       var scroll = new SmoothScroll()
       var anchor = document.querySelector('.about-section')
       scroll.animateScroll(anchor)
@@ -40,9 +25,8 @@ $(document).ready(function () {
     function check_if_in_view() {   
       var window_top_position = $window.scrollTop();
       var bxTwo = $animation_trigger.offset ();
-
+      var windowWidth = $(window).width(); 
       var bxTwoTrigger = bxTwo.top - bxTwo.top * .3;
-      console.log(bxTwoTrigger)
       if (windowWidth >= 1000) {
         if (bxTwoTrigger <= window_top_position) {
           $(".box").css({
@@ -71,35 +55,28 @@ $(document).ready(function () {
           });
           $("#box-sever").animate({right: "16%", top: "160px"}, 1000);
         }
-    }
-    
+      }
     }
     
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll'); 
   }
 
-
-
-
-
-
-  // $("#button").click(function () {
-  //   $('html, body').animate({
-  //     scrollTop: $("#myDiv").offset().top
-  //   }, 2000);
-  // });
+  function window_width() {
+    var windowWidth = $(window).width(); 
+    console.log('width :' + windowWidth)
+    if (windowWidth < 776) {
+      if ($(document).scrollTop() == 0) {
+        $("#main-header").removeClass("is-sticky");
+      } else {
+        $("#main-header").addClass("is-sticky");
+      }
+    }
+  }
+  $window.on('scroll resize', window_width);
+  $window.trigger('scroll'); 
 
 
 });
 
 
-// $(window).scroll(function () {
-  
- 
-
-
-//   if ($(document).scrollTop() == 100) {
-//     $("#box-one").addClass("move");
-//   } 
-// });
