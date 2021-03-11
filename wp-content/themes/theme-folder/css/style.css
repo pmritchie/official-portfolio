@@ -10848,6 +10848,11 @@ header .container {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 991.98px) {
+  .wpcf7 form input, .wpcf7 form textarea {
+    width: 345px;
+  }
+}
 .wpcf7 form p {
   display: flex;
   justify-content: center;
@@ -11332,6 +11337,11 @@ header .container {
 .contact .section {
   margin-top: 140px;
 }
+@media (max-width: 991.98px) {
+  .contact .section {
+    margin-top: 80px;
+  }
+}
 .contact .header .nav-link {
   background-color: rgba(255, 255, 255, 0.377);
 }
@@ -11339,16 +11349,33 @@ header .container {
   color: black !important;
 }
 .contact .hero-row {
-  justify-content: space-around;
   margin: 50px 0px;
+  justify-content: center;
 }
 .contact .hero-row .hero-content h1 {
   margin: 45px 0px;
+}
+.contact .hero-row .hero-content .img-wrapper {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 0;
 }
 .contact .hero-row .form-column {
   margin-top: 45px;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 991.98px) {
+  .contact .hero-row .content-col {
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact .hero-row {
+    flex-direction: column;
+  }
 }
 
 .resume {
