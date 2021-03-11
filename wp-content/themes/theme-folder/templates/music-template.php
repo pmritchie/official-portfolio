@@ -2,26 +2,6 @@
 
 <?php get_header(); ?>
 
-<!--Hero-->
-<!-- <?php if (have_rows('music_hero')) : ?>
-<?php while (have_rows('music_hero')) : the_row(); ?>
-<section class="section music-hero">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="hero-content">
-          <h1><?php the_sub_field('title'); ?></h1>
-          <h3><?php the_sub_field('tag'); ?></h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<?php endwhile; ?>
-<?php endif; ?> -->
-
-<!--/Hero-->
 
 <!--Song Section-->
 <?php if (have_rows('music_section')) : ?>
@@ -33,7 +13,7 @@
         <h2>Recordings</h2>
         <p>More Coming Soon!</p>
       </div>
-      <div class="col-lg-10 sol-md-10 col-sm-4 song-col">
+      <div class="col-lg-10 col-md-10 col-sm-6 song-col">
         <div class="song-wrapper">
           <div class="media-player">
             <div class='spokes'></div>

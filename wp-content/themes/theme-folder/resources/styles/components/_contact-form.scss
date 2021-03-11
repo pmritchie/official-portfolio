@@ -1,9 +1,15 @@
 .wpcf7 {
     width: 400px;
+ 
     form {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        input, textarea {
+            @include media-breakpoint-down(md){
+                width: 345px;
+            }
+        }
         p {
             display: flex;
             justify-content: center;

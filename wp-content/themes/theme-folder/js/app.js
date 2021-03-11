@@ -1255,29 +1255,15 @@ __webpack_require__(/*! intersection-observer */ "./node_modules/intersection-ob
 
 
 
-console.log('testing');
 $(document).ready(function () {
-  var windowWidth = $(window).width();
-  console.log('width :' + windowWidth);
-
-  if (windowWidth <= 1000) {
-    if ($(document).scrollTop() == 0) {
-      console.log();
-      $("#main-header").removeClass("is-sticky");
-    } else {
-      $("#main-header").addClass("is-sticky");
-    }
-  }
-
   var currentPage = get_page_vars;
-  console.log(currentPage.currentPage);
 
   if (get_page_vars.currentPage == '5-2') {
     var check_if_in_view = function check_if_in_view() {
       var window_top_position = $window.scrollTop();
       var bxTwo = $animation_trigger.offset();
+      var windowWidth = $(window).width();
       var bxTwoTrigger = bxTwo.top - bxTwo.top * .3;
-      console.log(bxTwoTrigger);
 
       if (windowWidth >= 1000) {
         if (bxTwoTrigger <= window_top_position) {
@@ -1334,7 +1320,6 @@ $(document).ready(function () {
 
     var heroBtn = document.querySelector('#hero-button');
     heroBtn.addEventListener('click', function (e) {
-      console.log('click');
       var scroll = new smooth_scroll__WEBPACK_IMPORTED_MODULE_2___default.a();
       var anchor = document.querySelector('.about-section');
       scroll.animateScroll(anchor);
@@ -1343,17 +1328,24 @@ $(document).ready(function () {
     var $window = $(window);
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
-  } // $("#button").click(function () {
-  //   $('html, body').animate({
-  //     scrollTop: $("#myDiv").offset().top
-  //   }, 2000);
-  // });
+  }
 
-}); // $(window).scroll(function () {
-//   if ($(document).scrollTop() == 100) {
-//     $("#box-one").addClass("move");
-//   } 
-// });
+  function window_width() {
+    var windowWidth = $(window).width();
+    console.log('width :' + windowWidth);
+
+    if (windowWidth < 776) {
+      if ($(document).scrollTop() == 0) {
+        $("#main-header").removeClass("is-sticky");
+      } else {
+        $("#main-header").addClass("is-sticky");
+      }
+    }
+  }
+
+  $window.on('scroll resize', window_width);
+  $window.trigger('scroll');
+});
 
 /***/ }),
 
