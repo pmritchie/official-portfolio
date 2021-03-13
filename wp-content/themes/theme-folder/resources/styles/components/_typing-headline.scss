@@ -37,6 +37,9 @@ $font-width: calc(#{$letter-count}ch + #{$letter-count}*#{$letter-spacing});
 			content: '';
 			width: $font-width;
 			height: 2ex;
+			@include media-breakpoint-down(sm){
+				height: 1ex;
+			}
 			left: 0;
 			top: 0;
 			background: $mask-color;

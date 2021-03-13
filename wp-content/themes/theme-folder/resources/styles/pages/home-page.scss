@@ -5,6 +5,9 @@
         overflow: hidden;
         background-color: $light-blue;
         text-align: center;
+        @include media-breakpoint-down(md) {
+          display: none !important;
+        }
         .title-row {
             h1 {
                 @include fluid-font(45px, 96px);
