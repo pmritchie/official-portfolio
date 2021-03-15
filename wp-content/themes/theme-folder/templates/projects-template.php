@@ -110,9 +110,9 @@
                 <div class="img-wrapper">
                     <img src="/wp-content/uploads/2021/03/bio_2.png"   alt="website screen shot"/>
                 </div>
-                <div class="img-wrapper mobile-img">
+                <!-- <div class="img-wrapper mobile-img">
                     <img src="/wp-content/uploads/2021/03/bio_mobile1.png"   alt="website screen shot"/>
-                </div>
+                </div> -->
                 <div class="img-wrapper mobile-img">
                     <img src="/wp-content/uploads/2021/03/bio_mobile2.png"   alt="website screen shot"/>
                 </div>
