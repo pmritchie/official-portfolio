@@ -16,9 +16,6 @@
           <div class="img-wrapper">
             <img src="<?php echo $image['url']; ?>" target="_blank" alt="<?php echo $image['title']; ?>"/>
           </div>
-          <div class="img-wrapper">
-            <img src="<?php echo $image_two['url']; ?>" target="_blank" alt="<?php echo $image_two['title']; ?>"/>
-          </div>
           <?php $link = get_sub_field('link'); ?>
           <a href="<?php echo $link['url']; ?>" target="_blank" rel="noreferrer noopener"><?php echo $link['title']; ?></a>
       </div>
