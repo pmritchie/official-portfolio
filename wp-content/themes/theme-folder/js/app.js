@@ -1257,6 +1257,12 @@ __webpack_require__(/*! intersection-observer */ "./node_modules/intersection-ob
 
 $(document).ready(function () {
   var currentPage = get_page_vars;
+  $('.hamburger').on('click', function (e) {
+    $('.hamburger').toggleClass('open');
+    $('.navbar').toggleClass('nav-open');
+    $('#navbar').toggleClass('view-height');
+    $('#main-header').toggleClass('no-background');
+  });
 
   if (get_page_vars.currentPage == '5-2') {
     var check_if_in_view = function check_if_in_view() {
@@ -1268,6 +1274,7 @@ $(document).ready(function () {
       if (windowWidth >= 1000) {
         if (bxTwoTrigger <= window_top_position) {
           $(".box").css({
+            "display": "block",
             "animation": "fadeIn ease 1s",
             "-webkit-animation": "fadeIn ease 1s",
             "-moz-animation": "fadeIn ease 1s",

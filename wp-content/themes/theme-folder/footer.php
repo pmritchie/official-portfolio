@@ -4,7 +4,11 @@
       <div class="row footer__row">
         <div class="col-md-6">
           <div class="footer__social__media">
-            <?php get_template_part('template-parts/footer-social-media'); ?>
+            <a href="/">Home Page</a>
+            <a href="/projects">Projects</a>
+            <a href="/resume">Resume</a>
+            <a href="/music">Music</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
         

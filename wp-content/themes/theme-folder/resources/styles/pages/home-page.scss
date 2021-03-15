@@ -13,6 +13,7 @@
                 @include fluid-font(45px, 96px);
                 font-weight: 800;
                 font-family: $font-family-sans-serif;
+                margin: 0 auto;
             }
             .hero-content {
                 padding: 40px 0px;
@@ -81,7 +82,7 @@
       .box {
         background-color: transparent;
         position: absolute;
-        visibility: none;
+        display: none; 
         @include media-breakpoint-down(md) {
           display: none !important;
         }
@@ -308,6 +309,19 @@
             100% {
               opacity:1;
           }
+        }
+        .link-col {
+          text-align: center;
+           
+          a {
+            font-size: 24px;
+            padding: 15px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 25px;
+            margin-bottom: 35px;
+            color: $purple-brown;
+            box-shadow: 0px 8px 8px 0px;
+          }   
         }
     }
 }

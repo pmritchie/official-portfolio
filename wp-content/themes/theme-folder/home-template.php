@@ -163,6 +163,11 @@
         <?php endwhile; ?>
       <?php endif; ?>
     </div>
+    <div class="row">
+      <div class="col-lg-12 link-col">
+        <a href="mike-ritchie.com/projects" target="_blank">Go To Projects page</a>
+      </div>
+    </div>
   </div>
 </section>
 <?php endwhile; ?>

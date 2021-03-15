@@ -12,10 +12,18 @@
   }
 
   &__row {
-    justify-content: space-between;
+
+    justify-content: flex-end;
+    @include media-breakpoint-down(sm){
+      justify-content: center;
+    }
   }
 
   &__social__media {
+    a {
+      margin-right: 15px;
+    }
+    text-align: right;
     ul {
       list-style-type: none;
       align-items: center;
