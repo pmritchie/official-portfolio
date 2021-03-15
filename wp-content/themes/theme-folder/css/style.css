@@ -10983,6 +10983,7 @@ header .container {
 .home .hero-section .title-row h1 {
   font-weight: 800;
   font-family: "Fjalla One", sans-serif;
+  margin: 0 auto;
 }
 .home .hero-section .title-row h1 {
   font-size: 45px;
@@ -11064,7 +11065,7 @@ header .container {
 .home .about-section .box {
   background-color: transparent;
   position: absolute;
-  visibility: none;
+  display: none;
 }
 @media (max-width: 991.98px) {
   .home .about-section .box {

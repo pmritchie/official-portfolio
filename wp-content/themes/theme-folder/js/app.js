@@ -1274,6 +1274,7 @@ $(document).ready(function () {
       if (windowWidth >= 1000) {
         if (bxTwoTrigger <= window_top_position) {
           $(".box").css({
+            "display": "block",
             "animation": "fadeIn ease 1s",
             "-webkit-animation": "fadeIn ease 1s",
             "-moz-animation": "fadeIn ease 1s",
