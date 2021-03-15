@@ -11,5 +11,6 @@
   &.show {
     max-height: 99em;
     transition: max-height 0.5s ease-in-out;
+    background-color: #FFF;
   }
 }

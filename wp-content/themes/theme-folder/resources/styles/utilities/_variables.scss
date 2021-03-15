@@ -49,7 +49,7 @@ $body-color: $brown-grey;
 // $text-muted: $dark;
 
 // Links
-$link-color: $squash;
+$link-color: $white;
 $link-decoration: underline;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: none;
@@ -90,7 +90,7 @@ $font-weight-black: 900;
 $font-weight-base: $font-weight-normal;
 
 // Navbar
-// $navbar-light-color: $black;
+$navbar-light-color: $white;
 // $navbar-light-hover-color: $light-blue;
 // $navbar-light-active-color: rgba($black, 0.9);
 $navbar-light-toggler-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-linecap='square' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");

@@ -10,6 +10,14 @@ import SmoothScroll from 'smooth-scroll'
 
 $(document).ready(function () {
   var currentPage = get_page_vars
+
+  $('.hamburger').on('click', function (e) {
+    $('.hamburger').toggleClass('open')
+    $('.navbar').toggleClass('nav-open')
+    $('#navbar').toggleClass('view-height')
+    $('#main-header').toggleClass('no-background')
+  });
+
   if (get_page_vars.currentPage == '5-2') {
     const heroBtn = document.querySelector('#hero-button')
     heroBtn.addEventListener('click', e => {
