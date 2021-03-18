@@ -37,8 +37,8 @@
                 <div class="img-wrapper">
                     <img src="/wp-content/uploads/2021/03/ott_2.png"   alt="website screen shot"/>
                 </div>
-                <div class="img-wrapper">
-                    <img src="/wp-content/uploads/2021/03/ott_1.png"   alt="website screen shot"/>
+                <div class="mobile-img">
+                    <img src="/wp-content/uploads/2021/03/ott_mobile.png"   alt="website screen shot"/>
                 </div>
             </div>
         </div>
@@ -61,8 +61,8 @@
                 <div class="img-wrapper">
                     <img src="/wp-content/uploads/2021/03/emindful_2.png"   alt="website screen shot"/>
                 </div>
-                <div class="img-wrapper">
-                    <img src="/wp-content/uploads/2021/03/emindful_3.png"   alt="website screen shot"/>
+                <div class="mobile-img">
+                    <img src="/wp-content/uploads/2021/03/emindful_mobile.png"   alt="website screen shot"/>
                 </div>
             </div>
         </div>
@@ -86,8 +86,8 @@
                 <div class="img-wrapper">
                     <img src="/wp-content/uploads/2021/03/sscf_2.png"   alt="website screen shot"/>
                 </div>
-                <div class="img-wrapper">
-                    <img src="/wp-content/uploads/2021/03/sscf_3.png"   alt="website screen shot"/>
+                <div class="mobile-img">
+                    <img src="/wp-content/uploads/2021/03/ss_mobile.png"   alt="website screen shot"/>
                 </div>
             </div>
         </div>
