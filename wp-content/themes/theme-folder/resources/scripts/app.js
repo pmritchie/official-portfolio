@@ -8,8 +8,38 @@ import retina from "retinajs";
 import SmoothScroll from 'smooth-scroll'
 
 
+
 $(document).ready(function () {
   var currentPage = get_page_vars
+  if (currentPage = "javascript") {
+    function getTime() {
+
+      console.log("clock")
+  
+      let date = new Date();
+  
+      let hour = date.getHours();
+      let min = date.getMinutes();
+      let sec = date.getSeconds();
+       hour = updateTime(hour);
+       min = updateTime(min);
+       sec = updateTime(sec);
+  
+       document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+       var t = setTimeout(function(){ getTime() }, 1000);
+   }
+  
+   function updateTime(k) {
+      if (k < 10) {
+        return "0" + k;
+      }
+      else {
+        return k;
+      }
+    }
+  
+  getTime();
+  }
 
   $('.hamburger').on('click', function (e) {
     $('.hamburger').toggleClass('open')
