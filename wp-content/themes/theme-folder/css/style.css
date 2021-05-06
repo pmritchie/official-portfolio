@@ -11666,3 +11666,32 @@ header .container {
     max-width: 100px;
   }
 }
+
+.javascript {
+  background-color: #f4f4f4;
+}
+.javascript .header .nav-link {
+  color: black;
+  background-color: rgba(216, 214, 214, 0.562) !important;
+}
+.javascript .header .nav-link:hover {
+  color: white !important;
+}
+.javascript .hero-section {
+  text-align: center;
+  padding: 120px 0px 40px;
+}
+.javascript .hero-section .content-col {
+  margin: 0 auto;
+}
+.javascript .project-section .project-one {
+  background-color: black;
+}
+.javascript .project-section #clock {
+  font-family: "Roboto Slab", serif;
+  color: #66ff99;
+  font-size: 56px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

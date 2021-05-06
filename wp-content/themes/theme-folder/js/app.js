@@ -25,6 +25,34 @@ __webpack_require__(/*! intersection-observer */ "./node_modules/intersection-ob
 
 $(document).ready(function () {
   var currentPage = get_page_vars;
+
+  if (currentPage = "javascript") {
+    var getTime = function getTime() {
+      console.log("clock");
+      var date = new Date();
+      var hour = date.getHours();
+      var min = date.getMinutes();
+      var sec = date.getSeconds();
+      hour = updateTime(hour);
+      min = updateTime(min);
+      sec = updateTime(sec);
+      document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+      var t = setTimeout(function () {
+        getTime();
+      }, 1000);
+    };
+
+    var updateTime = function updateTime(k) {
+      if (k < 10) {
+        return "0" + k;
+      } else {
+        return k;
+      }
+    };
+
+    getTime();
+  }
+
   $('.hamburger').on('click', function (e) {
     $('.hamburger').toggleClass('open');
     $('.navbar').toggleClass('nav-open');

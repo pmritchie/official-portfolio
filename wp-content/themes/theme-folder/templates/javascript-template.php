@@ -31,7 +31,7 @@
         <p><?php the_sub_field('project_one_description');?></p> 
       </div>
       <div class="col-lg-10 col-md-10 col-sm-12 content-col">
-        <div class="calculator"></div>
+        <div id="clock" class="calculator"></div>
       </div>
     </div>
   <?php endwhile; ?>
