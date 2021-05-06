@@ -30,13 +30,18 @@ $(document).ready(function () {
     var getTime = function getTime() {
       console.log("clock");
       var date = new Date();
+      console.log(date);
       var hour = date.getHours();
       var min = date.getMinutes();
       var sec = date.getSeconds();
+      var day = date.getDay();
+      var month = date.getMonth();
+      var year = date.getFullYear();
       hour = updateTime(hour);
       min = updateTime(min);
       sec = updateTime(sec);
       document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+      document.getElementById("date").innerText = day + " : " + month + " : " + year;
       var t = setTimeout(function () {
         getTime();
       }, 1000);

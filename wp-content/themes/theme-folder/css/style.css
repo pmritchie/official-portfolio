@@ -11687,6 +11687,9 @@ header .container {
 .javascript .project-section .project-one {
   background-color: black;
 }
+.javascript .project-section .clock-wrapper {
+  background-color: black;
+}
 .javascript .project-section #clock {
   font-family: "Roboto Slab", serif;
   color: #66ff99;

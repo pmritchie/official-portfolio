@@ -17,15 +17,19 @@ $(document).ready(function () {
       console.log("clock")
   
       let date = new Date();
-  
+      console.log(date)
       let hour = date.getHours();
       let min = date.getMinutes();
       let sec = date.getSeconds();
+      let day = date.getDay();
+      let month = date.getMonth();
+      let year = date.getFullYear();
        hour = updateTime(hour);
        min = updateTime(min);
        sec = updateTime(sec);
   
-       document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+      document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+      document.getElementById("date").innerText = day + " : " + month + " : " + year;
        var t = setTimeout(function(){ getTime() }, 1000);
    }
   
